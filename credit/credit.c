@@ -27,7 +27,7 @@ string checkforvalid(int arr[], int length)
 int main(void)
 {
     long long cardnum = get_long("Number: ");
-    
+
     int array[25];
     while (cardnum > 0)
     {
@@ -41,6 +41,7 @@ int main(void)
     char numtext[256];
     sprintf(numtext, "%lld", cardnum);
     int length = strlen(numtext);
+    
     char cardtype[10];
 
     if (length < 13 || length > 16)
@@ -50,15 +51,15 @@ int main(void)
     }
     else
     {
-        if (numtext[0] == 4)
+        if (array[0] == 4)
         {
             strcpy(cardtype, "VISA");
         }
-        else if (numtext[0] == 5 && numtext[1] > 0 && numtext[1] < 6)
+        else if (array[0] == 5 && array[1] > 0 && array[1] < 6)
         {
             strcpy(cardtype, "MASTERCARD");
         }
-        else if (numtext[0] == 3 && (numtext[1] == 4 || numtext[1] == 7))
+        else if (array[0] == 3 && (array[1] == 4 || array[1] == 7))
         {
             strcpy(cardtype, "AMEX");
         }
