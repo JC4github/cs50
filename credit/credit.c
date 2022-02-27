@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string checkforvalid(int arr[], int length)
+int checkforvalid(int arr[], int length)
 {
     int sum;
     for (int i = 1; i < length ; i+=2)
@@ -15,11 +15,11 @@ string checkforvalid(int arr[], int length)
     }
     if (sum % 10 > 0)
     {
-        return "INVALID";
+        return 2; //invalid
     }
     else
     {
-        return 0;
+        return 1; //valid
     }
 }
 
@@ -41,7 +41,7 @@ int main(void)
     char numtext[256];
     sprintf(numtext, "%lld", cardnum);
     int length = strlen(numtext);
-    
+
     char cardtype[10];
 
     if (length < 13 || length > 16)
@@ -69,9 +69,5 @@ int main(void)
             return printf("%s\n", cardtype);
         }
     }
-
-
-
-    strcpy(cardtype, checkforvalid(array, length));
-    return printf("%s\n", cardtype);
+    return 0;
 }
