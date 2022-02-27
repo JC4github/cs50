@@ -53,14 +53,9 @@ int main(void)
         ++i;
     }
 
-
-
-    char cardtype[100];
-
     if (size < 13 || size > 16)
     {
-        strcpy(cardtype, "INVALID");
-        return printf("%s\n", cardtype);
+        return printf("INVALID\n");
     }
     else
     {
@@ -68,45 +63,38 @@ int main(void)
         {
             if (checkforvalid(array, size) == 1)
             {
-                strcpy(cardtype, "VISA");
-                return printf("%s\n", cardtype);
+                return printf("VISA\n");
             }
             else
             {
-                strcpy(cardtype, "INVALID");
-                return printf("%s\n", cardtype);
+                return printf("INVALID\n");
             }
         }
         else if (array[size - 1] == 5 && array[size - 2] > 0 && array[size - 2] < 6)
         {
             if (checkforvalid(array, size) == 1)
             {
-                strcpy(cardtype, "MASTERCARD");
-                return printf("%s\n", cardtype);
+                return printf("MASTERCARD\n");
             }
             else
             {
-                strcpy(cardtype, "INVALID");
-                return printf("%s\n", cardtype);
+                return printf("INVALID\n");
             }
         }
         else if (array[size - 1] == 3 && (array[size - 2] == 4 || array[size - 2] == 7))
         {
             if (checkforvalid(array, size) == 1)
             {
-                strcpy(cardtype, "AMEX");
-                return printf("%s\n", cardtype);
+                return printf("AMEX\n");
             }
             else
             {
-                strcpy(cardtype, "INVALID");
-                return printf("%s\n", cardtype);
+                return printf("INVALID\n");
             }
         }
         else
         {
-            strcpy(cardtype, "INVALID");
-            return printf("%s\n", cardtype);
+            return printf("INVALID\n");
         }
     }
     return 0;
