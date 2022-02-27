@@ -2,38 +2,75 @@
 #include <stdio.h>
 #include <string.h>
 
+string checkforvalid(int arr[], int length)
+{
+    int sum;
+    for (int i = 1; i < length ; i+=2)
+    {
+        sum = sum + (arr[i]*2);
+    }
+    for (int i = 0; i < length ; i+=2)
+    {
+        sum = sum + (arr[i]);
+    }
+    if (sum % 10 > 0)
+    {
+        return "INVALID";
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
 int main(void)
 {
     long long cardnum = get_long("Number: ");
+    
+    int array[25];
+    while (cardnum > 0)
+    {
+        int num = cardnum;
+        int i = 0;
+        array[i] = num % 10; //creates flipped array
+        num = num / 10;
+        ++i;
+    }
+
     char numtext[256];
     sprintf(numtext, "%lld", cardnum);
     int length = strlen(numtext);
-    char cardtype[];
-    
-    if (length < 13 && length > 16)
+    char cardtype[10];
+
+    if (length < 13 || length > 16)
     {
-        cardtype = "INVALID";
+        strcpy(cardtype, "INVALID");
+        return printf("%s\n", cardtype);
     }
     else
     {
         if (numtext[0] == 4)
         {
-            cardtype = "VISA";
+            strcpy(cardtype, "VISA");
         }
-        else if (numtext[0] = 5 && numtext[1] > 0 && numtext[1] < 6)
+        else if (numtext[0] == 5 && numtext[1] > 0 && numtext[1] < 6)
         {
-            cardtype = "MASTERCARD";
+            strcpy(cardtype, "MASTERCARD");
         }
-        else if (numtext[0] = 3 && (numtext[1] = 4 || numtext[1] = 7)
+        else if (numtext[0] == 3 && (numtext[1] == 4 || numtext[1] == 7))
         {
-            cardtype = "AMEX";
+            strcpy(cardtype, "AMEX");
         }
         else
         {
-            cardtype = "INVALID";
+            strcpy(cardtype, "INVALID");
+            return printf("%s\n", cardtype);
         }
     }
 
 
-    printf("%s\n", numtext);
+
+    strcpy(cardtype, checkforvalid(array, length));
+    return printf("%s\n", cardtype);
 }
