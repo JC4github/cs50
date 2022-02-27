@@ -9,7 +9,15 @@ int checkforvalid(int arr[], int length)
 
     for (int i = 1; i < length ; i+=2)
     {
-        sum1 = sum1 + (arr[i]*2); //dont add the products, but the digits
+        if (arr[i]*2 > 10)
+        {
+            sum1++;
+            sum1 = sum1 + (arr[i]*2 - 10);
+        }
+        else
+        {
+        sum1 = sum1 + (arr[i]*2);
+        }
     }
     for (int i = 0; i < length ; i+=2)
     {
