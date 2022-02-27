@@ -7,9 +7,10 @@ int main(void)
     long long cardnum = get_long("Number: ");
     char numtext[256];
     sprintf(numtext, "%lld", cardnum);
-
+    int length = strlen(numtext);
     char cardtype[];
-    if (strlen(numtext) < 13 && strlen(numtext) > 16)
+    
+    if (length < 13 && length > 16)
     {
         cardtype = "INVALID";
     }
@@ -33,6 +34,6 @@ int main(void)
         }
     }
 
-    
+
     printf("%s\n", numtext);
 }
