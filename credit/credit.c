@@ -55,7 +55,8 @@ int main(void)
 
     if (size < 13 || size > 16)
     {
-        return printf("INVALID\n");
+        printf("INVALID\n");
+        return 0;
     }
     else
     {
@@ -63,38 +64,45 @@ int main(void)
         {
             if (checkforvalid(array, size) == 1)
             {
-                return printf("VISA\n");
+                printf("VISA\n");
+                return 0;
             }
             else
             {
-                return printf("INVALID\n");
+                printf("INVALID\n");
+                return 0;
             }
         }
         else if (array[size - 1] == 5 && array[size - 2] > 0 && array[size - 2] < 6)
         {
             if (checkforvalid(array, size) == 1)
             {
-                return printf("MASTERCARD\n");
+                printf("MASTERCARD\n");
+                return 0;
             }
             else
             {
-                return printf("INVALID\n");
+                printf("INVALID\n");
+                return 0;
             }
         }
         else if (array[size - 1] == 3 && (array[size - 2] == 4 || array[size - 2] == 7))
         {
             if (checkforvalid(array, size) == 1)
             {
-                return printf("AMEX\n");
+                printf("AMEX\n");
+                return 0;
             }
             else
             {
-                return printf("INVALID\n");
+                printf("INVALID\n");
+                return 0;
             }
         }
         else
         {
-            return printf("INVALID\n");
+            printf("INVALID\n");
+            return 0;
         }
     }
     return 0;
