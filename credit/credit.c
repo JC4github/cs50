@@ -7,19 +7,19 @@ int checkforvalid(int arr[], int length)
     int sum1 = 0;
     int sum2 = 0;
 
-    for (int i = 1; i < length ; i+=2)
+    for (int i = 1; i < length ; i += 2)
     {
-        if (arr[i]*2 >= 10)
+        if (arr[i] * 2 >= 10)
         {
             sum1++;
-            sum1 = sum1 + (arr[i]*2 - 10);
+            sum1 = sum1 + (arr[i] * 2 - 10);
         }
         else
         {
-        sum1 = sum1 + (arr[i]*2);
+            sum1 = sum1 + (arr[i] * 2);
         }
     }
-    for (int i = 0; i < length ; i+=2)
+    for (int i = 0; i < length ; i += 2)
     {
         sum2 = sum2 + (arr[i]);
     }
