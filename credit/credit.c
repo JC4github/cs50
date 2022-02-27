@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    long cardnum = get_long("Number: ");
+    long long cardnum = get_long("Number: ");
 
     char numtext[256];
-    sprintf(numtext, "%long", cardnum);
+    sprintf(numtext, "%lld", cardnum);
 
     printf("%s", numtext);
 }
