@@ -55,7 +55,7 @@ int main(void)
 
 
 
-    char cardtype[10];
+    char cardtype[100];
 
     if (size < 13 || size > 16)
     {
