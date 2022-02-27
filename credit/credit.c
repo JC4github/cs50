@@ -5,7 +5,7 @@ int main(void)
 {
     long cardnum = get_long("Number: ");
 
-    char numtext = (char)cardnum;
+    char numtext[] = (char)cardnum;
 
-    printf(%)
+    printf("%s", numtext);
 }
