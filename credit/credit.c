@@ -53,15 +53,42 @@ int main(void)
     {
         if (array[0] == 4)
         {
-            strcpy(cardtype, "VISA");
+            if (checkforvalid(array, length) == 1)
+            {
+                strcpy(cardtype, "VISA");
+                return printf("%s\n", cardtype);
+            }
+            else
+            {
+                strcpy(cardtype, "INVALID");
+                return printf("%s\n", cardtype);
+            }
         }
         else if (array[0] == 5 && array[1] > 0 && array[1] < 6)
         {
-            strcpy(cardtype, "MASTERCARD");
+            if (checkforvalid(array, length) == 1)
+            {
+                strcpy(cardtype, "MASTERCARD");
+                return printf("%s\n", cardtype);
+            }
+            else
+            {
+                strcpy(cardtype, "INVALID");
+                return printf("%s\n", cardtype);
+            }
         }
         else if (array[0] == 3 && (array[1] == 4 || array[1] == 7))
         {
-            strcpy(cardtype, "AMEX");
+            if (checkforvalid(array, length) == 1)
+            {
+                strcpy(cardtype, "AMEX");
+                return printf("%s\n", cardtype);
+            }
+            else
+            {
+                strcpy(cardtype, "INVALID");
+                return printf("%s\n", cardtype);
+            }
         }
         else
         {
