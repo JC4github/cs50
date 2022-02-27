@@ -30,10 +30,10 @@ int main(void)
             blocks--;
         }
         printf("  ");
-        while (blocks > 0)
+        while (blocks < i)
         {
             printf("#");
-            blocks--;
+            blocks++;
         }
         numspace--;
         printf("\n");
