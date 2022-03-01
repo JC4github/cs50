@@ -27,6 +27,6 @@ int main(void)
         }
     }
 
-    printf("%d %d %d", words, sentences, letters);
+    printf("%d %d %d\n", words, sentences, letters);
     return 0;
 }
