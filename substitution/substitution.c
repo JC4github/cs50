@@ -4,14 +4,14 @@
 
 int main(int argc, string argv[])
 {
-    int length = strlen(argv);
+    int length = strlen(argv[1]);
 
     if(argc != 1)
     {
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    else (length != 26)
+    else if(length != 26)
     {
         printf("Key must contain 26 characters.");
         return 1;
