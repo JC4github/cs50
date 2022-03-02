@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     //int length = strlen(argv[1]);
     else if (strlen(argv[1]) != 26)
     {
-        printf("Key must contain 26 characters.");
+        printf("Key must contain 26 characters.\n");
         return 1;
     }
     return 0;
