@@ -6,7 +6,7 @@ int main(int argc, string argv[])
 {
     int length = strlen(argv[1]);
 
-    if(argc != 1)
+    if(argc != 2)
     {
         printf("Usage: ./substitution key\n");
         return 1;
