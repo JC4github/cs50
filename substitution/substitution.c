@@ -15,6 +15,9 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    printf("%c", argv[1][0]);
+    string alllowerkey = "";
+    strcpy(alllowerkey, argv[1]);
+    printf("%s\n", alllowerkey);
+    printf("%c\n", argv[1][0]);
     return 0;
 }
