@@ -16,9 +16,10 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string alllowerkey = "";
-    strcpy(alllowerkey, argv[1]);
-    printf("%s\n", alllowerkey);
+    char c = argv[1][0];
+    string lowerkey = "";
+    lowerkey[0] = tolower(c);
+    printf("%s\n", lowerkey);
     printf("%c\n", argv[1][0]);
     return 0;
 }
