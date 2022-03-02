@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     }
 
     char c = argv[1][0];
-    string lowerkey = "";
+    string lowerkey[26];
     lowerkey[0] = tolower(c);
     printf("%s\n", lowerkey);
     printf("%c\n", argv[1][0]);
