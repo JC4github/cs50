@@ -11,13 +11,14 @@ int main(void)
     int words = 1;
     int sentences = 0;
 
+//loop through array finding things
     for (int i = 0; i < length; i++)
     {
         if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z'))
         {
             letters++;
         }
-        else if(text[i] == ' ')
+        else if (text[i] == ' ')
         {
             words++;
         }
@@ -27,10 +28,12 @@ int main(void)
         }
     }
 
+//doing the math of coleman liau index
     float L = ((float)letters / (float)words) * 100;
     float S = ((float)sentences / (float)words) * 100;
     int index = round((0.0588 * L) - (0.296 * S) - 15.8);
 
+//printing results
     if (index < 1)
     {
         printf("Before Grade 1\n");
