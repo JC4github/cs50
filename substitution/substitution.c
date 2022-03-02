@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <string>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -16,4 +16,5 @@ int main(int argc, string argv[])
         printf("Key must contain 26 characters.");
         return 1;
     }
+    return 0;
 }
