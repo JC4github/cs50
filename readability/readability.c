@@ -13,7 +13,7 @@ int main(void)
 
     for (int i = 0; i < length; i++)
     {
-        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'a'))
+        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z'))
         {
             letters++;
         }
