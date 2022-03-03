@@ -16,6 +16,12 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    
+    for (int i = 0; i < 26, i++)
+    {
+
+    }
+
     char c = argv[1][0];
     string lowerkey[26];
     lowerkey[0] = tolower(c);
