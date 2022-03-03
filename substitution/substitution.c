@@ -37,10 +37,10 @@ int main(int argc, string argv[])
     }
 
     //checking for dups
-
+    int total = 0;
     for (int i = 0; i < 26; i++)
     {
-
+        total = total + higherkey[i];
     }
         string userIn = get_string("plaintext: ");
     int length = strlen(userIn);
@@ -60,5 +60,6 @@ int main(int argc, string argv[])
     }
 
     printf("ciphertext: %s\n", userIn);
+    printf("%d\n", total);
     return 0;
 }
