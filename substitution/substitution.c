@@ -37,7 +37,7 @@ int main(int argc, string argv[])
     }
 
     //checking for dups
-    int total = 
+
     for (int i = 0; i < 26; i++)
     {
 
