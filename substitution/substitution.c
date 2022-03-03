@@ -15,7 +15,17 @@ int main(int argc, string argv[])
         printf("Key must contain 26 characters.\n");
         return 1;
     }
-    else if ((argv[1][i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z'))
+    else
+    {
+        for (int i = 0; i < 26; i++)
+        {
+            if ((argv[1][i] < 'A' || argv[1][i] > 'Z') || (argv[1][i] >= 'a' && argv[1][i] <= 'z'))
+            {
+
+            }
+        }
+
+    }
 
         // make two key, one all cap, one all lower
         char lowerkey[26];
