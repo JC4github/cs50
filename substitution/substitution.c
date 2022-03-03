@@ -25,8 +25,22 @@ int main(int argc, string argv[])
         higherkey[i] = toupper(argv[1][i]);
     }
 
+    for (int i = 0; i < 26; i++)
+    {
+        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z'))
+        {
+            letters++;
+        }
+        else if (text[i] == ' ')
+        {
+            words++;
+        }
+        else if (text[i] == '!' || text[i] == '?' || text[i] == '.')
+        {
+            sentences++;
+        }
+    }
 
-    
     printf("%s\n", lowerkey);
     printf("%s\n", higherkey);
     return 0;
