@@ -19,9 +19,10 @@ int main(int argc, string argv[])
     {
         for (int i = 0; i < 26; i++)
         {
-            if ((argv[1][i] < 'A' || argv[1][i] > 'Z') || (argv[1][i] >= 'a' && argv[1][i] <= 'z'))
+            if ((argv[1][i] < 'A' || argv[1][i] > 'Z') && (argv[1][i] < 'a' || argv[1][i] > 'z'))
             {
-
+                printf("Key must only contain alphabet characters.\n");
+                return 1;
             }
         }
 
