@@ -32,8 +32,10 @@ int compute_score(string word)
         letter = tolower(word[i]);
         if (word[i] >= 'a' && word[i] <= 'z')
         {
-            
+            pos = word[i] - 'a';
+            point = point + POINTS[pos];
         }
     }
+    return point;
 
 }
