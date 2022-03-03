@@ -25,10 +25,10 @@ int main(int argc, string argv[])
         higherkey[i] = toupper(argv[1][i]);
     }
 
-    string userIn = get_string(plaintext: );
+    string userIn = get_string("plaintext: ");
+    int length = strlen(userIn);
 
-
-    for (int i = 0; i < 26; i++)
+    for (int i = 0; i < length; i++)
     {
         if (userIn[i] >= 'A' && userIn[i] <= 'Z')
         {
@@ -37,11 +37,11 @@ int main(int argc, string argv[])
         }
         else if (userIn[i] >= 'a' && userIn[i] <= 'z')
         {
-
+            int pos = userIn[i] - 'a';
+            userIn[i] = lowerkey[pos];
         }
     }
 
-    printf("%s\n", lowerkey);
-    printf("%s\n", higherkey);
+    printf("%s\n", userIn);
     return 0;
 }
