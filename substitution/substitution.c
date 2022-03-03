@@ -42,6 +42,6 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("%s\n", userIn);
+    printf("ciphertext: %s\n", userIn);
     return 0;
 }
