@@ -25,11 +25,10 @@ int main(int argc, string argv[])
                 return 1;
             }
         }
-
     }
 
         // make two key, one all cap, one all lower
-        char lowerkey[26];
+    char lowerkey[26];
     char higherkey[26];
     for (int i = 0; i < 26; i++)
     {
@@ -37,7 +36,13 @@ int main(int argc, string argv[])
         higherkey[i] = toupper(argv[1][i]);
     }
 
-    string userIn = get_string("plaintext: ");
+    //checking for dups
+    int total = 
+    for (int i = 0; i < 26; i++)
+    {
+
+    }
+        string userIn = get_string("plaintext: ");
     int length = strlen(userIn);
 
     for (int i = 0; i < length; i++)
