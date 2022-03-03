@@ -25,19 +25,19 @@ int main(int argc, string argv[])
         higherkey[i] = toupper(argv[1][i]);
     }
 
+    string userIn = get_string(plaintext: );
+
+
     for (int i = 0; i < 26; i++)
     {
-        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z'))
+        if (userIn[i] >= 'A' && userIn[i] <= 'Z')
         {
-            letters++;
+            int pos = userIn[i] - 'A';
+            userIn[i] = higherkey[pos];
         }
-        else if (text[i] == ' ')
+        else if (userIn[i] >= 'a' && userIn[i] <= 'z')
         {
-            words++;
-        }
-        else if (text[i] == '!' || text[i] == '?' || text[i] == '.')
-        {
-            sentences++;
+
         }
     }
 
