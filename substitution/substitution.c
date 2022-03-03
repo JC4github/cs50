@@ -19,12 +19,9 @@ int main(int argc, string argv[])
     char lowerkey[26];
     for (int i = 0; i < 26, i++)
     {
-        char
+        lowerkey[i] = argv[1][i];
     }
 
-    char c = argv[1][0];
-    string lowerkey[26];
-    lowerkey[0] = tolower(c);
     printf("%s\n", lowerkey);
     printf("%c\n", argv[1][0]);
     return 0;
