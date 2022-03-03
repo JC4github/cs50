@@ -22,7 +22,7 @@ int main(int argc, string argv[])
         lowerkey[i] = argv[1][i];
     }
 
-    printf("%s\n", lowerkey);
+    printf("%c\n", lowerkey[25]);
     printf("%c\n", argv[1][0]);
     return 0;
 }
