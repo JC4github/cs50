@@ -42,6 +42,12 @@ int main(int argc, string argv[])
     {
         total = total + higherkey[i];
     }
+
+    if(total != 2015)
+    {
+        printf("Key must contain one of each alphabet character.\n");
+        return 1;
+    }
         string userIn = get_string("plaintext: ");
     int length = strlen(userIn);
 
@@ -60,6 +66,5 @@ int main(int argc, string argv[])
     }
 
     printf("ciphertext: %s\n", userIn);
-    printf("%d\n", total);
     return 0;
 }
