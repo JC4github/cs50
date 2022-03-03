@@ -16,10 +16,10 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string lowerkey = {26}
+    char lowerkey[26];
     for (int i = 0; i < 26, i++)
     {
-
+        char
     }
 
     char c = argv[1][0];
