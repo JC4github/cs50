@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     }
 
     char lowerkey[26];
-    for (int i = 0; i < 26, i++)
+    for (int i = 0; i < 26; i++)
     {
         lowerkey[i] = argv[1][i];
     }
