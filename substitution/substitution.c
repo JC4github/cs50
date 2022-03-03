@@ -27,7 +27,7 @@ int main(int argc, string argv[])
         }
     }
 
-        // make two key, one all cap, one all lower
+    // make two key, one all cap, one all lower
     char lowerkey[26];
     char higherkey[26];
     for (int i = 0; i < 26; i++)
@@ -36,19 +36,21 @@ int main(int argc, string argv[])
         higherkey[i] = toupper(argv[1][i]);
     }
 
-    //checking for dups
+    //checking for dups in the key
     int total = 0;
     for (int i = 0; i < 26; i++)
     {
         total = total + higherkey[i];
     }
 
-    if(total != 2015)
+    if (total != 2015) //2015 is one of each ascii cap letter added
     {
         printf("Key must contain one of each alphabet character.\n");
         return 1;
     }
-        string userIn = get_string("plaintext: ");
+
+    //getting user text
+    string userIn = get_string("plaintext: ");
     int length = strlen(userIn);
 
     for (int i = 0; i < length; i++)
