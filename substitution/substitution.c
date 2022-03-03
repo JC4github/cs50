@@ -16,13 +16,18 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    //make two key, one all cap, one all lower
     char lowerkey[26];
+    char higherkey[26];
     for (int i = 0; i < 26; i++)
     {
-        lowerkey[i] = argv[1][i];
+        lowerkey[i] = tolower(argv[1][i]);
+        higherkey[i] = toupper(argv[1][i]);
     }
 
-    printf("%c\n", lowerkey[25]);
-    printf("%c\n", argv[1][0]);
+
+    
+    printf("%s\n", lowerkey);
+    printf("%s\n", higherkey);
     return 0;
 }
