@@ -25,13 +25,14 @@ int compute_score(string word)
 {
     int length = strlen(word);
     char letter = "a";
-    int 
+    int point = 0;
+    int pos = 0;
     for (i=0; i<length; i++)
     {
         letter = tolower(word[i]);
         if (word[i] >= 'a' && word[i] <= 'z')
         {
-
+            
         }
     }
 
