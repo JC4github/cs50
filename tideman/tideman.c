@@ -191,7 +191,7 @@ void sort_pairs(void)
             }
         }
         ignore++;
-        // need swap highest value with first index
+        pairs[i] = pairs[index]
     }
 
     return;
