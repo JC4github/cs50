@@ -208,9 +208,13 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     int stillZero = candidate_count;
-    for (int i = 0; i < pair_count; i++)
+    int seen_j_values[pair_count];
+    for (int i = 0; i < pair_count; i++) //loop through pairs array
     {
-        
+        for (int j = 0, j <pair_count; j++)
+        {
+            
+        }
     }
     return;
 }
