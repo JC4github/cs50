@@ -214,15 +214,15 @@ void lock_pairs(void)
         int match = 0;
         for (int j = 0, j < pair_count; j++) //loop through seen j values
         {
-            if (pairs[i].loser != seen_j_values[j])
+            if (pairs[i].loser == seen_j_values[j])
             {
-                seen_j_values[i] = pairs[i].loser;
-                stillZero--;
+                match = 1; //seen it
             }
         }
         if (match != 1)
         {
-
+            seen_j_values[i] = pairs[i].loser;
+            stillZero--;
         }
         if (stillZero > 1)
         {
