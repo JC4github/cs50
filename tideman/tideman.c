@@ -222,7 +222,10 @@ void lock_pairs(void)
             seen_j_values[i] = pairs[i].loser;
             stillZero--;
         }
-        
+        if (stillZero > 1)
+        {
+            locked[pairs[i].winner][pairs[i].loser] = 1;
+        }
     }
     return;
 }
