@@ -211,9 +211,16 @@ void lock_pairs(void)
     int seen_j_values[pair_count];
     for (int i = 0; i < pair_count; i++) //loop through pairs array
     {
+        int match = 0;
         for (int j = 0, j <pair_count; j++)
         {
-            
+            if (pairs[i].loser == seen_j_values[j])
+            match = 1;
+        }
+        if (match != 1)
+        {
+            seen_j_values[i] = pairs[i].loser;
+            stillZero--;
         }
     }
     return;
