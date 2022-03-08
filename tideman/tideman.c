@@ -215,7 +215,9 @@ void lock_pairs(void)
         for (int j = 0, j < pair_count; j++) //loop through seen j values
         {
             if (pairs[i].loser == seen_j_values[j])
-            match = 1;
+            {
+                match = 1;
+            }
         }
         if (match != 1)
         {
