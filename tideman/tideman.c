@@ -190,7 +190,7 @@ void sort_pairs(void)
                 index = j; //index of heightest value
             }
         }
-        ignore++;
+        ignore++; //ignore values that are sorted 
         int holdingWinner = pairs[i].winner;
         int holdingLoser = pairs[i].loser;
 
