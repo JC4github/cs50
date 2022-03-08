@@ -179,6 +179,7 @@ void sort_pairs(void)
 {
     int strength = 0;
     int ignore = 0;
+    int index = 0;
     for (int i = 0; i < pair_count; i++)
     {
         for (int j = ignore; j < pair_count; j++) // gets highest difference loop
@@ -186,6 +187,7 @@ void sort_pairs(void)
             if (strength < (pairs[j].winner - pairs[j].loser))
             {
                 strength = (pairs[j].winner - pairs[j].loser)
+                index = j; //index of heightest value
             }
         }
         ignore++;
