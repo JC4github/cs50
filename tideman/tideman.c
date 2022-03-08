@@ -227,7 +227,7 @@ void lock_pairs(void)
         }
         if (stillZero > 1)
         {
-            locked[pairs[i].winner][pairs[i].loser] = 1;
+            locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
     return;
@@ -240,7 +240,8 @@ void print_winner(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            locked[j][i]
+            if (locked[j][i] == true)
+            
         }
     }
     return;
