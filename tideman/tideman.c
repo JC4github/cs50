@@ -190,7 +190,7 @@ void sort_pairs(void)
                 index = j; //index of heightest value
             }
         }
-        ignore++; //ignore values that are sorted 
+        ignore++; //ignore values that are sorted
         int holdingWinner = pairs[i].winner;
         int holdingLoser = pairs[i].loser;
 
@@ -207,7 +207,7 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
+    int stillZero = candidate_count;
     return;
 }
 
