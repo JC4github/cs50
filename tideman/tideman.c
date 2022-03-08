@@ -222,6 +222,7 @@ void lock_pairs(void)
             seen_j_values[i] = pairs[i].loser;
             stillZero--;
         }
+        
     }
     return;
 }
