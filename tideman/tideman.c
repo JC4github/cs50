@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max number of candidates
 #define MAX 9
@@ -131,9 +132,9 @@ void add_pairs(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (prefereces[i][j] != 0)
+            if (preferences[i][j] != 0)
             {
-                if (prefereces[i][j] > prefereces[j][i])
+                if (preferences[i][j] > preferences[j][i])
                 {
                     int exists = 0;                            // entry doest exist yet
                     for (int var = 0; var < pair_count; var++) // finding if entry already exists
@@ -151,7 +152,7 @@ void add_pairs(void)
                         pair_count++;
                     }
                 }
-                else if (prefereces[i][j] < prefereces[j][i])
+                else if (preferences[i][j] < preferences[j][i])
                 {
                     int exists = 0;                            // entry doest exist yet
                     for (int var = 0; var < pair_count; var++) // finding if entry already exists
