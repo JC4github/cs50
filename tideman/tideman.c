@@ -139,7 +139,7 @@ void add_pairs(void)
                     int exists = 0;                            // entry doest exist yet
                     for (int var = 0; var < pair_count; var++) // finding if entry already exists
                     {
-                        if (i == pairs[var].winner && j == [pairs[var].loser])
+                        if (i == pairs[var].winner && j == pairs[var].loser)
                         {
                             exists = 1; // entry already exist
                         }
@@ -157,7 +157,7 @@ void add_pairs(void)
                     int exists = 0;                            // entry doest exist yet
                     for (int var = 0; var < pair_count; var++) // finding if entry already exists
                     {
-                        if (j == pairs[var].winner && i == [pairs[var].loser])
+                        if (j == pairs[var].winner && i == pairs[var].loser)
                         {
                             exists = 1; // entry already exist
                         }
@@ -188,7 +188,7 @@ void sort_pairs(void)
         {
             if (strength < (pairs[j].winner - pairs[j].loser))
             {
-                strength = (pairs[j].winner - pairs[j].loser)
+                strength = (pairs[j].winner - pairs[j].loser);
                 index = j; //index of heightest value
             }
         }
