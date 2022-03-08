@@ -219,7 +219,7 @@ void lock_pairs(void)
                 match = 1; //seen it
             }
         }
-        if (match != 1)
+        if (match != 1) //if not seen, add it into array
         {
             seen_j_values[i] = pairs[i].loser;
             stillZero--;
