@@ -238,10 +238,17 @@ void print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
+        int notThis = 0; //start false
         for (int j = 0; j < candidate_count; j++)
         {
             if (locked[j][i] == true)
-            
+            {
+                notThis = 1; //change to true, if theres a 1
+            }
+        }
+        if (notThis == 0)
+        {
+            printf("%s\n", candidates[i]);
         }
     }
     return;
