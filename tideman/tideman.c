@@ -103,7 +103,7 @@ bool vote(int rank, string name, int ranks[])
     {
         if (strcmp(name, candidates[i]) == 0) //finding matching candidate
         {
-            ranks[rank - 1] = i;
+            ranks[rank] = i;
             return true;
         }
     }
