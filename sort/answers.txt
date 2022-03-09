@@ -1,11 +1,11 @@
 sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: very slow when sorting large amount of random number
 
-sort2 uses: TODO
+sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: the quickest when sorting large amount of random numbers
 
-sort3 uses: TODO
+sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: the slowest when sorting already sorted numbers
