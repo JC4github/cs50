@@ -572,11 +572,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     s[0] = image[i - 1][j - 1];
                     s[1] = image[i - 1][j];
                     s[2] = image[i - 1][j + 1];
-                    s[3] = image[i][j + 1];
-                    s[4] = image[i + 1][j + 1];
-                    s[5] = image[i + 1][j];
+                    s[5] = image[i][j + 1];
+                    s[8] = image[i + 1][j + 1];
+                    s[7] = image[i + 1][j];
                     s[6] = image[i + 1][j - 1];
-                    s[7] = image[i][j - 1];
+                    s[3] = image[i][j - 1];
 
                     for (int k = 0; k < 9; k++)
                     {
