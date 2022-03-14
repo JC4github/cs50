@@ -328,7 +328,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         blue[k] = s[k].rgbtBlue;
                         green[k] = s[k].rgbtGreen;
                     }
-                    
+
                     }
                 }
                 else if (i == height - 1)
@@ -375,34 +375,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int calGx(RGBTRIPLE pixel, int location)
+int calGx(int colour[])
 {
-    if (location == 11)
-    {
+    int gx[] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
+    int gy[] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
+    int totalcolour = 0;
 
-    }
-    else if (location = 12)
+    for (int i; i < 9; i++)
     {
-    }
-    else if (location = 13)
-    {
-    }
-    else if (location = 14)
-    {
-    }
-    else if (location = 15)
-    {
-    }
-    else if (location = 16)
-    {
-    }
-    else if (location = 17)
-    {
-    }
-    else if (location = 18)
-    {
-    }
-    else if (location = 19)
-    {
+        totalcolour += gx[i] * colour[i];
     }
 }
