@@ -360,3 +360,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
+
+int calGx(RGBTRIPLE pixel, int location)
+{
+    if (location == )
+    {
+
+    }
+}
