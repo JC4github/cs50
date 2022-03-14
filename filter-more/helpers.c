@@ -1,9 +1,10 @@
 #include "helpers.h"
+#include <stdio.h>
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-   printf("%i\n", image[0][0])
+   printf("%i\n", image[0][0]);
 
     for (int i = 0; i < height; i ++)
     {
