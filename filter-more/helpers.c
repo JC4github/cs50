@@ -316,7 +316,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         s[n].rgbtBlue = 0;
                         s[n].rgbtGreen = 0;
                     }
-                    
+
                     int red[9];
                     int blue[9];
                     int green[9];
@@ -380,8 +380,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         return;
     }
 
-    int calcedge(int colour[])
-    {
+int calcedge(int colour[])
+{
         int gx[] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
         int gy[] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
         int totalcolourgx = 0;
@@ -403,4 +403,4 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             return total;
         }
-    }
+}
