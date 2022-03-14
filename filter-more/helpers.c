@@ -9,7 +9,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     BYTE blue;
     BYTE avg;
 
-    for (int i = 0; i < height; i ++)
+    for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
@@ -31,11 +31,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     int half;
     if (width % 2 == 1)
     {
-        half = width - (int)(width/2);
+        half = width - (int)(width / 2);
     }
     else
     {
-        half = width/2;
+        half = width / 2;
     }
 
     RGBTRIPLE temp;
@@ -70,7 +70,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     s[0] = image[i][j + 1];
                     s[1] = image[i + 1][j + 1];
-                    s[2] = image[i + 1][j ];
+                    s[2] = image[i + 1][j];
                     s[3] = image[i][j];
 
                     for (int k = 0; k < 4; k++)
@@ -80,9 +80,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         blue += s[k].rgbtBlue;
                     }
 
-                    image[i][j].rgbtRed = round(red/4);
-                    image[i][j].rgbtBlue = round(blue/4);
-                    image[i][j].rgbtGreen = round(green/4);
+                    image[i][j].rgbtRed = round(red / 4);
+                    image[i][j].rgbtBlue = round(blue / 4);
+                    image[i][j].rgbtGreen = round(green / 4);
                 }
                 else if (i == height - 1)
                 {
@@ -126,9 +126,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         blue += s[k].rgbtBlue;
                     }
 
-                    image[i][j].rgbtRed = round(red/6);
-                    image[i][j].rgbtBlue = round(blue/6);
-                    image[i][j].rgbtGreen = round(green/6);
+                    image[i][j].rgbtRed = round(red / 6);
+                    image[i][j].rgbtBlue = round(blue / 6);
+                    image[i][j].rgbtGreen = round(green / 6);
                 }
             }
             else if (j == width - 1)
