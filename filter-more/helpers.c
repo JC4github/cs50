@@ -298,7 +298,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tempimg[height][width];
-    RGBTRIPLE s[9];
+
 
     for (int i = 0; i < height; i++)
     {
@@ -308,6 +308,15 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 if (i == 0)
                 {
+                    RGBTRIPLE s[9];
+
+                    for (int n = 0; n < 9; n++)
+                    {
+                        s[n].rgbtRed = 0;
+                        s[n].rgbtBlue = 0;
+                        s[n].rgbtGreen = 0;
+                    }
+                    
                     int red[9];
                     int blue[9];
                     int green[9];
@@ -315,12 +324,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     s[0] = image[i][j + 1];
                     s[1] = image[i + 1][j + 1];
                     s[2] = image[i + 1][j];
-                    s[3] = 0;
-                    s[4] = 0;
-                    s[5] = 0;
-                    s[6] = 0;
-                    s[7] = 0;
-                    s[8] = 0;
 
                     for (int k; k < 9; k++)
                     {
