@@ -312,8 +312,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     double green = 0;
                     double blue = 0;
 
-                    s[0] = image[i][j - 1];
-                    s[1] = image[i + 1][j - 1];
+                    s[0] = image[i][j + 1] * 2;
+                    s[1] = image[i + 1][j + 1];
                     s[2] = image[i + 1][j];
 
                 }
