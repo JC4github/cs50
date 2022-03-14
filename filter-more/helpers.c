@@ -353,8 +353,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     int green[9];
 
                     s[0] = image[i][j + 1];
-                    s[1] = image[i + 1][j + 1];
-                    s[2] = image[i + 1][j];
+                    s[1] = image[i - 1][j + 1];
+                    s[2] = image[i - 1][j];
 
                     for (int k = 0; k < 9; k++)
                     {
@@ -368,24 +368,160 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
                 else
                 {
+                    RGBTRIPLE s[9];
+
+                    for (int n = 0; n < 9; n++)
+                    {
+                        s[n].rgbtRed = 0;
+                        s[n].rgbtBlue = 0;
+                        s[n].rgbtGreen = 0;
+                    }
+
+                    int red[9];
+                    int blue[9];
+                    int green[9];
+
+                    s[0] = image[i][j + 1];
+                    s[1] = image[i + 1][j + 1];
+                    s[2] = image[i + 1][j];
+                    s[3] = image[i - 1][j];
+                    s[4] = image[i - 1][j + 1];
+
+                    for (int k = 0; k < 9; k++)
+                    {
+                        red[k] = s[k].rgbtRed;
+                        blue[k] = s[k].rgbtBlue;
+                        green[k] = s[k].rgbtGreen;
+                    }
+                    tempimg[i][j].rgbtRed = calcedge(red);
+                    tempimg[i][j].rgbtBlue = calcedge(blue);
+                    tempimg[i][j].rgbtGreen = calcedge(green);
                 }
             }
             else if (j == width - 1)
             {
                 if (i == 0)
                 {
+                    RGBTRIPLE s[9];
+
+                    for (int n = 0; n < 9; n++)
+                    {
+                        s[n].rgbtRed = 0;
+                        s[n].rgbtBlue = 0;
+                        s[n].rgbtGreen = 0;
+                    }
+
+                    int red[9];
+                    int blue[9];
+                    int green[9];
+
+                    s[0] = image[i][j - 1];
+                    s[1] = image[i + 1][j - 1];
+                    s[2] = image[i + 1][j];
+
+                    for (int k = 0; k < 9; k++)
+                    {
+                        red[k] = s[k].rgbtRed;
+                        blue[k] = s[k].rgbtBlue;
+                        green[k] = s[k].rgbtGreen;
+                    }
+                    tempimg[i][j].rgbtRed = calcedge(red);
+                    tempimg[i][j].rgbtBlue = calcedge(blue);
+                    tempimg[i][j].rgbtGreen = calcedge(green);
                 }
                 else if (i == height - 1)
                 {
+                    RGBTRIPLE s[9];
+
+                    for (int n = 0; n < 9; n++)
+                    {
+                        s[n].rgbtRed = 0;
+                        s[n].rgbtBlue = 0;
+                        s[n].rgbtGreen = 0;
+                    }
+
+                    int red[9];
+                    int blue[9];
+                    int green[9];
+
+                    s[0] = image[i][j - 1];
+                    s[1] = image[i - 1][j - 1];
+                    s[2] = image[i - 1][j];
+
+                    for (int k = 0; k < 9; k++)
+                    {
+                        red[k] = s[k].rgbtRed;
+                        blue[k] = s[k].rgbtBlue;
+                        green[k] = s[k].rgbtGreen;
+                    }
+                    tempimg[i][j].rgbtRed = calcedge(red);
+                    tempimg[i][j].rgbtBlue = calcedge(blue);
+                    tempimg[i][j].rgbtGreen = calcedge(green);
                 }
                 else
                 {
+                    RGBTRIPLE s[9];
+
+                    for (int n = 0; n < 9; n++)
+                    {
+                        s[n].rgbtRed = 0;
+                        s[n].rgbtBlue = 0;
+                        s[n].rgbtGreen = 0;
+                    }
+
+                    int red[9];
+                    int blue[9];
+                    int green[9];
+
+                    s[0] = image[i][j - 1];
+                    s[1] = image[i + 1][j - 1];
+                    s[2] = image[i + 1][j];
+                    s[3] = image[i - 1][j];
+                    s[4] = image[i - 1][j - 1];
+
+                    for (int k = 0; k < 9; k++)
+                    {
+                        red[k] = s[k].rgbtRed;
+                        blue[k] = s[k].rgbtBlue;
+                        green[k] = s[k].rgbtGreen;
+                    }
+                    tempimg[i][j].rgbtRed = calcedge(red);
+                    tempimg[i][j].rgbtBlue = calcedge(blue);
+                    tempimg[i][j].rgbtGreen = calcedge(green);
                 }
             }
             else
             {
                 if (i == 0)
                 {
+                    RGBTRIPLE s[9];
+
+                    for (int n = 0; n < 9; n++)
+                    {
+                        s[n].rgbtRed = 0;
+                        s[n].rgbtBlue = 0;
+                        s[n].rgbtGreen = 0;
+                    }
+
+                    int red[9];
+                    int blue[9];
+                    int green[9];
+
+                    s[0] = image[i][j - 1];
+                    s[1] = image[i + 1][j - 1];
+                    s[2] = image[i + 1][j];
+                    s[3] = image[i - 1][j];
+                    s[4] = image[i - 1][j - 1];
+
+                    for (int k = 0; k < 9; k++)
+                    {
+                        red[k] = s[k].rgbtRed;
+                        blue[k] = s[k].rgbtBlue;
+                        green[k] = s[k].rgbtGreen;
+                    }
+                    tempimg[i][j].rgbtRed = calcedge(red);
+                    tempimg[i][j].rgbtBlue = calcedge(blue);
+                    tempimg[i][j].rgbtGreen = calcedge(green);
                 }
                 else if (i == height - 1)
                 {
