@@ -9,7 +9,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     BYTE red;
     BYTE green;
     BYTE blue;
-    BYTE avg;
+    int avg;
 
     for (int i = 0; i < height; i++)
     {
