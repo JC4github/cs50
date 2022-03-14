@@ -307,45 +307,36 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 if (i == 0)
                 {
-
                 }
                 else if (i == height - 1)
                 {
-
                 }
                 else
                 {
-
                 }
             }
             else if (j == width - 1)
             {
                 if (i == 0)
                 {
-
                 }
                 else if (i == height - 1)
                 {
-
                 }
                 else
                 {
-
                 }
             }
             else
             {
                 if (i == 0)
                 {
-
                 }
                 else if (i == height - 1)
                 {
-
                 }
                 else
                 {
-
                 }
             }
         }
@@ -363,8 +354,32 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 int calGx(RGBTRIPLE pixel, int location)
 {
-    if (location == )
+    if (location == 11)
     {
-
+        
+    }
+    else if (location = 12)
+    {
+    }
+    else if (location = 13)
+    {
+    }
+    else if (location = 14)
+    {
+    }
+    else if (location = 15)
+    {
+    }
+    else if (location = 16)
+    {
+    }
+    else if (location = 17)
+    {
+    }
+    else if (location = 18)
+    {
+    }
+    else if (location = 19)
+    {
     }
 }
