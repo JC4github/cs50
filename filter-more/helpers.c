@@ -298,6 +298,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tempimg[height][width];
+    RGBTRIPLE s[9];
 
     for (int i = 0; i < height; i++)
     {
@@ -307,6 +308,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 if (i == 0)
                 {
+                    double red = 0;
+                    double green = 0;
+                    double blue = 0;
+
+                    s[0] = image[i][j - 1];
+                    s[1] = image[i + 1][j - 1];
+                    s[2] = image[i + 1][j];
+
                 }
                 else if (i == height - 1)
                 {
@@ -356,7 +365,7 @@ int calGx(RGBTRIPLE pixel, int location)
 {
     if (location == 11)
     {
-        
+
     }
     else if (location = 12)
     {
