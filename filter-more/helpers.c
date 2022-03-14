@@ -6,9 +6,9 @@ int calcedge(int colour[]);
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    BYTE red;
-    BYTE green;
-    BYTE blue;
+    int red;
+    int green;
+    int blue;
     int avg;
 
     for (int i = 0; i < height; i++)
