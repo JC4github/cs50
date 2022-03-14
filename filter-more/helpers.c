@@ -379,10 +379,15 @@ int calGx(int colour[])
 {
     int gx[] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
     int gy[] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
-    int totalcolour = 0;
+    int totalcolourgx = 0;
+    int totalcolourgy = 0;
+    int total = 0;
 
     for (int i; i < 9; i++)
     {
-        totalcolour += gx[i] * colour[i];
+        totalcolourgx += gx[i] * colour[i];
+        totalcolourgy += gy[i] * colour[i];
     }
+
+    total = totalcolourgx ^
 }
