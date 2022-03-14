@@ -344,7 +344,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 else
                 {
                 }
-
                 else if (j == width - 1)
                 {
                     if (i == 0)
