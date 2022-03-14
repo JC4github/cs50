@@ -3,8 +3,8 @@
 
 int calcedge(int colour[]);
 
-    // Convert image to grayscale
-    void grayscale(int height, int width, RGBTRIPLE image[height][width])
+// Convert image to grayscale
+void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     BYTE red;
     BYTE green;
@@ -301,7 +301,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tempimg[height][width];
 
-
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -327,7 +326,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     s[1] = image[i + 1][j + 1];
                     s[2] = image[i + 1][j];
 
-                    for (int k; k < 9; k++)
+                    for (int k = 0; k < 9; k++)
                     {
                         red[k] = s[k].rgbtRed;
                         blue[k] = s[k].rgbtBlue;
@@ -344,64 +343,65 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 else
                 {
                 }
-                else if (j == width - 1)
+            }
+            else if (j == width - 1)
+            {
+                if (i == 0)
                 {
-                    if (i == 0)
-                    {
-                    }
-                    else if (i == height - 1)
-                    {
-                    }
-                    else
-                    {
-                    }
+                }
+                else if (i == height - 1)
+                {
                 }
                 else
                 {
-                    if (i == 0)
-                    {
-                    }
-                    else if (i == height - 1)
-                    {
-                    }
-                    else
-                    {
-                    }
+                }
+            }
+            else
+            {
+                if (i == 0)
+                {
+                }
+                else if (i == height - 1)
+                {
+                }
+                else
+                {
                 }
             }
         }
-
-        for (int i = 0; i < height; i++)
-        {
-            for (int j = 0; j < width; j++)
-            {
-                image[i][j] = tempimg[i][j];
-            }
-        }
-        return;
     }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = tempimg[i][j];
+        }
+    }
+    return;
+}
 
 int calcedge(int colour[])
 {
-        int gx[] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
-        int gy[] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
-        int totalcolourgx = 0;
-        int totalcolourgy = 0;
-        int total = 0;
+    int gx[] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
+    int gy[] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
+    int totalcolourgx = 0;
+    int totalcolourgy = 0;
+    int total = 0;
 
-        for (int i; i < 9; i++)
-        {
-            totalcolourgx += gx[i] * colour[i];
-            totalcolourgy += gy[i] * colour[i];
-        }
+    for (int i = 0; i < 9; i++)
+    {
+        totalcolourgx += gx[i] * colour[i];
+        totalcolourgy += gy[i] * colour[i];
+    }
 
-        total = totalcolourgx ^ 2 + totalcolourgy ^ 2;
-        if (total > 255)
-        {
-            return 255;
-        }
-        else
-        {
-            return total;
-        }
+    total = totalcolourgx ^ 2 + totalcolourgy ^ 2;
+    if (total > 255)
+    {
+        return 255;
+    }
+    else
+    {
+        return total;
+    }
 }
