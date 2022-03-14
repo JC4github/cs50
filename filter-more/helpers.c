@@ -616,7 +616,7 @@ int calcedge(int colour[])
         totalcolourgy += gy[i] * colour[i];
     }
 
-    total = totalcolourgx ^ 2 + totalcolourgy ^ 2;
+    total = sqrt((totalcolourgx ^ 2) + (totalcolourgy ^ 2));
     if (total > 255)
     {
         return 255;
