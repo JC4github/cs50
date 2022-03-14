@@ -330,16 +330,16 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
 
                     }
-                }
+
                 else if (i == height - 1)
                 {
                 }
                 else
                 {
                 }
-            }
-            else if (j == width - 1)
-            {
+
+                else if (j == width - 1)
+                {
                 if (i == 0)
                 {
                 }
@@ -389,5 +389,5 @@ int calGx(int colour[])
         totalcolourgy += gy[i] * colour[i];
     }
 
-    total = totalcolourgx ^
+    total = totalcolourgx^2 + totalcolourgy^2;
 }
