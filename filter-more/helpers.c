@@ -328,8 +328,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         blue[k] = s[k].rgbtBlue;
                         green[k] = s[k].rgbtGreen;
                     }
-
-                    }
+                    tempimg[i][j].rgbtRed = calcedge(red);
+                    tempimg[i][j].rgbtBlue = calcedge(blue);
+                    tempimg[i][j].rgbtGreen = calcedge(green);
+                }
 
                 else if (i == height - 1)
                 {
@@ -340,54 +342,62 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                 else if (j == width - 1)
                 {
-                if (i == 0)
-                {
-                }
-                else if (i == height - 1)
-                {
-                }
-                else
-                {
-                }
-            }
-            else
-            {
-                if (i == 0)
-                {
-                }
-                else if (i == height - 1)
-                {
+                    if (i == 0)
+                    {
+                    }
+                    else if (i == height - 1)
+                    {
+                    }
+                    else
+                    {
+                    }
                 }
                 else
                 {
+                    if (i == 0)
+                    {
+                    }
+                    else if (i == height - 1)
+                    {
+                    }
+                    else
+                    {
+                    }
                 }
             }
         }
-    }
 
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
+        for (int i = 0; i < height; i++)
         {
-            image[i][j] = tempimg[i][j];
+            for (int j = 0; j < width; j++)
+            {
+                image[i][j] = tempimg[i][j];
+            }
+        }
+        return;
+    }
+
+    int calcedge(int colour[])
+    {
+        int gx[] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
+        int gy[] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
+        int totalcolourgx = 0;
+        int totalcolourgy = 0;
+        int total = 0;
+
+        for (int i; i < 9; i++)
+        {
+            totalcolourgx += gx[i] * colour[i];
+            totalcolourgy += gy[i] * colour[i];
+        }
+
+        total = totalcolourgx ^ 2 + totalcolourgy ^ 2;
+        if (total > 255)
+        {
+            return 255;
+        }
+        else
+        {
+            return total;
         }
     }
-    return;
-}
-
-int calGx(int colour[])
-{
-    int gx[] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
-    int gy[] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
-    int totalcolourgx = 0;
-    int totalcolourgy = 0;
-    int total = 0;
-
-    for (int i; i < 9; i++)
-    {
-        totalcolourgx += gx[i] * colour[i];
-        totalcolourgy += gy[i] * colour[i];
-    }
-
-    total = totalcolourgx^2 + totalcolourgy^2;
-}
