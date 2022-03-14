@@ -315,12 +315,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     s[0] = image[i][j + 1];
                     s[1] = image[i + 1][j + 1];
                     s[2] = image[i + 1][j];
-
-                    for (int k = 0; k < 3; k++)
-                    {
-                        red = (s[k].rgbtRed * 2) ^ 2 + (s[k].rgbtRed * 2) ^ 2;
-                        green += s[k].rgbtGreen;
-                        blue += s[k].rgbtBlue;
+                    s[2] = image[i + 1][j];
+                    s[2] = image[i + 1][j];
+                    s[2] = image[i + 1][j];
+                    s[2] = image[i + 1][j];
+                    s[2] = image[i + 1][j];
+                    s[2] = image[i + 1][j];
                     }
                 }
                 else if (i == height - 1)
