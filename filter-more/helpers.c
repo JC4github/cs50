@@ -1,8 +1,10 @@
 #include "helpers.h"
 #include <math.h>
 
-// Convert image to grayscale
-void grayscale(int height, int width, RGBTRIPLE image[height][width])
+int calcedge(int colour[]);
+
+    // Convert image to grayscale
+    void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     BYTE red;
     BYTE green;
