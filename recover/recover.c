@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
                 img = NULL;
                 sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename, "w");
+                fwrite(&buffer, 1, 512, img);
             }
             counter++;
         }
