@@ -41,7 +41,6 @@ int main(int argc, char *argv[])
                 FILE *img = fopen(filename, "w");
             }
             counter++;
-
         }
 
         if (counter > 0)
