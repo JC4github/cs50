@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
             {
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename, "w");
+                fwrite(*point, 1, 512, *img);
             }
             else
             {
@@ -42,10 +43,10 @@ int main(int argc, char *argv[])
             }
             counter++;
         }
-
-        if (counter > 0)
+        else
         {
             fwrite(*point, 1, 512, *img);
         }
     }
+    fclose(*img);
 }
