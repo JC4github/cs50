@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
             }
             counter++;
         }
-        else if(counter > 0)
+        else if (counter > 0)
         {
             fwrite(&buffer, 1, 512, img);
         }
