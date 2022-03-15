@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
             }
             else
             {
-                fclose(*point);
+                fclose(point);
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename, "w");
             }
@@ -48,5 +48,5 @@ int main(int argc, char *argv[])
             fwrite(&buffer, 1, 512, img);
         }
     }
-    fclose(*point);
+    fclose(point);
 }
