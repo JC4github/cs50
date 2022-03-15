@@ -19,6 +19,7 @@ if (argc != 2)
          return 1;
     }
 
+    int counter = 0;
     BYTE buffer[512];
     while (fread(buffer, 1, 512, file) == 512)
     {
@@ -26,7 +27,7 @@ if (argc != 2)
         {
             if ((buffer[3] & 0xf0) == 0xe0)
             {
-
+                sprintf
             }
         }
     }
