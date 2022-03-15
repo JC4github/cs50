@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     int counter = 0;
     BYTE buffer[512];
-    BYTE *point = buffer;
+    int *point = &buffer;
     string filename = NULL;
 
     while (fread(buffer, 1, 512, file) == 512)
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
             {
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *img = fopen(filename, "w");
-                fwrite(*point, 1, 512, *img);
+                fwrite(point, 1, 512, img);
             }
             else
             {
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            fwrite(*point, 1, 512, *img);
+            fwrite(point, 1, 512, img);
         }
     }
     fclose(*img);
