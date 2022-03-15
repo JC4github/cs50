@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
         if (counter > 0)
         {
-            fwrite(point, 1, 512, img);
+            fwrite(*point, 1, 512, *img);
         }
     }
 }
