@@ -41,11 +41,11 @@ int main(int argc, char *argv[])
     while (fread(&buffer, 1, 2, input) == 2)
     {
         edited_sample = buffer * factor;
-        fwrite()
+        fwrite(&edited_sample, 1, 2, output);
     }
-        // TODO: Read samples from input file and write updated data to output file
+    // TODO: Read samples from input file and write updated data to output file
 
-        // Close files
-        fclose(input);
+    // Close files
+    fclose(input);
     fclose(output);
 }
