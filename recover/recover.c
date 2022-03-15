@@ -22,11 +22,12 @@ int main(int argc, char *argv[])
 
     int counter = 0;
     BYTE buffer[512];
+    
     string filename = NULL;
 
     while (fread(buffer, 1, 512, file) == 512)
     {
-        
+
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff)
         {
             if ((buffer[3] & 0xf0) == 0xe0)
