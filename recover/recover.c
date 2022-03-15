@@ -36,7 +36,9 @@ int main(int argc, char *argv[])
             }
             else
             {
-                
+                fclose(img);
+                sprintf(filename, "%03i.jpg", counter);
+                FILE *img = fopen(filename, "w");
             }
             counter++;
 
