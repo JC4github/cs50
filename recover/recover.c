@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     int counter = 0;
     BYTE buffer[512];
-    char *filename = ;
+    char *filename = malloc(4);
     FILE *img;
 
     while (fread(&buffer, 1, 512, file) == 512)
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
         {
             if (counter == 0)
             {
-                sprintf(&filename, "%03i.jpg", counter);
+                sprintf(filename, "%03i.jpg", counter);
                 img = fopen(filename, "w");
                 fwrite(&buffer, 1, 512, img);
             }
