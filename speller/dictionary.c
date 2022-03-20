@@ -6,6 +6,7 @@
 #include <cs50.h>
 #include <stdlib.h>
 #include "dictionary.h"
+#include <string.h>
 
 // Represents a node in a hash table
 typedef struct node
@@ -46,7 +47,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    string currentWord;
+    string currentWord = NULL;
     while (fscanf(fp, "%s", currentWord) != EOF)
     {
         fscanf(fp, "%s", currentWord);
@@ -59,7 +60,7 @@ bool load(const char *dictionary)
         strcpy(n->word, currentWord);
         n->next = NULL;
 
-        int hashPosition = hash(node->word);
+        int hashPosition = hash(n->word);
         n->next = table[hashPosition]->next;
         table[hashPosition]->next = n;
 
