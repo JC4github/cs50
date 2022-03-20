@@ -40,43 +40,43 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *fp = fopen(dictionary, "r"); //opens file
-    if (fp == NULL)
-    {
-        fclose(fp);
-        return false;
-    }
+    // FILE *fp = fopen(dictionary, "r"); //opens file
+    // if (fp == NULL)
+    // {
+    //     fclose(fp);
+    //     return false;
+    // }
 
-    string currentWord = NULL;
-    while (fscanf(fp, "%s", currentWord) != EOF)
-    {
-        fscanf(fp, "%s", currentWord);
+    // string currentWord = NULL;
+    // while (fscanf(fp, "%s", currentWord) != EOF)
+    // {
+    //     fscanf(fp, "%s", currentWord);
 
-        // node *n = malloc(sizeof(node));
-        // if (n == NULL)
-        // {
-        //     return false;
-        // }
+    //     node *n = malloc(sizeof(node));
+    //     if (n == NULL)
+    //     {
+    //         return false;
+    //     }
 
-        // strcpy(n->word, currentWord);
-        // n->next = NULL;
+    //     strcpy(n->word, currentWord);
+    //     n->next = NULL;
 
-        // unsigned int hashPosition = hash(currentWord);
+    //     unsigned int hashPosition = hash(currentWord);
 
-        // if (table[hashPosition]->next == NULL)
-        // {
-        //     table[hashPosition]->next = n;
-        // }
-        // else
-        // {
-        //     n->next = table[hashPosition]->next;
-        //     table[hashPosition]->next = n;
-        // }
+    //     if (table[hashPosition]->next == NULL)
+    //     {
+    //         table[hashPosition]->next = n;
+    //     }
+    //     else
+    //     {
+    //         n->next = table[hashPosition]->next;
+    //         table[hashPosition]->next = n;
+    //     }
 
-        // free(n);
-    }
+    //     free(n);
+    // }
 
-    return true;
+    return false;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
