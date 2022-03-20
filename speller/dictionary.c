@@ -52,28 +52,28 @@ bool load(const char *dictionary)
     {
         fscanf(fp, "%s", currentWord);
 
-        node *n = malloc(sizeof(node));
-        if (n == NULL)
-        {
-            return false;
-        }
+        // node *n = malloc(sizeof(node));
+        // if (n == NULL)
+        // {
+        //     return false;
+        // }
 
-        strcpy(n->word, currentWord);
-        n->next = NULL;
+        // strcpy(n->word, currentWord);
+        // n->next = NULL;
 
-        unsigned int hashPosition = hash(currentWord);
+        // unsigned int hashPosition = hash(currentWord);
 
-        if (table[hashPosition]->next == NULL)
-        {
-            table[hashPosition]->next = n;
-        }
-        else
-        {
-            n->next = table[hashPosition]->next;
-            table[hashPosition]->next = n;
-        }
+        // if (table[hashPosition]->next == NULL)
+        // {
+        //     table[hashPosition]->next = n;
+        // }
+        // else
+        // {
+        //     n->next = table[hashPosition]->next;
+        //     table[hashPosition]->next = n;
+        // }
 
-        free(n);
+        // free(n);
     }
 
     return true;
