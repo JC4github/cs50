@@ -45,7 +45,7 @@ bool load(const char *dictionary)
         fclose(fp);
         return false;
     }
-    
+
     string currentWord;
     while (fscanf(fp, "%s", currentWord) != EOF)
     {
@@ -58,6 +58,8 @@ bool load(const char *dictionary)
         }
         strcpy(n->word, currentWord);
         n->next = NULL;
+
+        int hashPosition = hash(node->word);
     }
 
 
