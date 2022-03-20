@@ -45,8 +45,8 @@ bool load(const char *dictionary)
         fclose(fp);
         return false;
     }
-
-    string currentWord = fscanf(fp, "%s", word)
+    
+    fscanf(fp, "%s", word)
     node *n = malloc(sizeof(node));
     if (n == NULL)
     {
