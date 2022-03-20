@@ -57,11 +57,11 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        
+
         strcpy(n->word, currentWord);
         n->next = NULL;
 
-        int hashPosition = hash(n->word);
+        int hashPosition = hash(currentWord);
         n->next = table[hashPosition]->next;
         table[hashPosition]->next = n;
 
