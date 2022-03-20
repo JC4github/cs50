@@ -61,15 +61,17 @@ bool load(const char *dictionary)
         strcpy(n->word, currentWord);
         n->next = NULL;
 
-        int hashPosition = hash(currentWord);
+        unsigned int hashPosition = hash(currentWord);
+
         if (table[hashPosition]->next == NULL)
         {
             table[hashPosition]->next = n;
         }
-        else{
+        else
+        {
             n->next = table[hashPosition]->next;
             table[hashPosition]->next = n;
-            }
+        }
 
         free(n);
     }
