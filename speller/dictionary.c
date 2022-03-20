@@ -45,20 +45,22 @@ bool load(const char *dictionary)
         fclose(fp);
         return false;
     }
+    
     string currentWord;
     while (fscanf(fp, "%s", currentWord) != EOF)
     {
         fscanf(fp, "%s", currentWord);
+
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return false;
+        }
+        strcpy(n->word, currentWord);
+        n->next = NULL;
     }
 
 
-    node *n = malloc(sizeof(node));
-    if (n == NULL)
-    {
-        return false;
-    }
-    strcpy(n->word, currentWord)
-    n->next = NULL;
 
     return false;
 }
