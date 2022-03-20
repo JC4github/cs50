@@ -60,6 +60,8 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         int hashPosition = hash(node->word);
+        n->next = table[hashPosition]->next;
+        
     }
 
 
