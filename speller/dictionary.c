@@ -63,11 +63,10 @@ bool load(const char *dictionary)
         n->next = table[hashPosition]->next;
         table[hashPosition]->next = n;
 
+        free(n);
     }
 
-
-
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
