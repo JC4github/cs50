@@ -77,17 +77,8 @@ bool load(const char *dictionary)
                 n->next = NULL;
 
                 int hashPosition = hash(n->word);
-
-                if (table[hashPosition]->next == NULL)
-                {
-                    table[hashPosition]->next = n;
-                }
-                else
-                {
-                    n->next = table[hashPosition]->next;
-                    table[hashPosition]->next = n;
-                }
-
+                n->next = table[hashPosition]->next;
+                table[hashPosition]->next = n;
                 free(n);
             }
         }
