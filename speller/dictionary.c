@@ -30,13 +30,15 @@ bool check(const char *word)
 {
     // TODO
     int hashPosition = hash(word);
+
     for (node *tmp = table[hashPosition]; tmp != NULL; tmp = tmp->next)
     {
-        if (strcasecmp(tolower(word), tolower(tmp->word)) == 0)
+        if (strcasecmp(word, tmp->word) == 0)
         {
             return true;
         }
     }
+    
     return false;
 }
 
