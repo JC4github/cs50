@@ -30,7 +30,10 @@ bool check(const char *word)
 {
     // TODO
     int hashPosition = hash(word);
-    
+    for (node *tmp = table[hashPosition]; tmp != NULL; tmp = tmp->next)
+    {
+        if (strcmp(tolower(word), tolower(tmp->word)))
+    }
     return false;
 }
 
