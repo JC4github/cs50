@@ -32,7 +32,10 @@ bool check(const char *word)
     int hashPosition = hash(word);
     for (node *tmp = table[hashPosition]; tmp != NULL; tmp = tmp->next)
     {
-        if (strcmp(tolower(word), tolower(tmp->word)))
+        if (strcasecmp(tolower(word), tolower(tmp->word)) == 0)
+        {
+            return true;
+        }
     }
     return false;
 }
