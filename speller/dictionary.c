@@ -29,6 +29,8 @@ int wordCount = 0;
 bool check(const char *word)
 {
     // TODO
+    int hashPosition = hash(word);
+    
     return false;
 }
 
