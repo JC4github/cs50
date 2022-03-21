@@ -65,7 +65,7 @@ bool load(const char *dictionary)
         {
             table[i] = NULL;
         }
-        
+
         while (fscanf(fp, "%s", currentWord) != EOF)
         {
             node *n = malloc(sizeof(node));
@@ -82,7 +82,7 @@ bool load(const char *dictionary)
                 n->next = NULL;
 
                 int hashPosition = hash(n->word);
-                n->next = table[hashPosition]->next;
+                n->next = table[hashPosition].next;
                 table[hashPosition]->next = n;
                 free(n);
             }
