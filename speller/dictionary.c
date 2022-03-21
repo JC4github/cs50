@@ -61,7 +61,7 @@ bool load(const char *dictionary)
     else
     {
         char currentWord[LENGTH + 1];
-        for(int i = 0; i < 26; i++)
+        for (int i = 0; i < 26; i++)
         {
             table[i] = malloc(sizeof(node));
             if (table[i] == NULL)
