@@ -8,15 +8,12 @@
 #include <string.h>
 #include <strings.h>
 
-
-
 // Represents a node in a hash table
 typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
@@ -55,7 +52,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *fp = fopen(dictionary, "r"); //opens file
+    FILE *fp = fopen(dictionary, "r"); // opens file
     if (fp == NULL)
     {
         fclose(fp);
@@ -109,7 +106,7 @@ bool unload(void)
     // TODO
     for (int i = 0; i < 26; i++)
     {
-        while(table[i] != NULL)
+        while (table[i] != NULL)
         {
             node *list = table[i];
             node *tmp = list->next;
