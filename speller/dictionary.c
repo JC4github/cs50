@@ -92,8 +92,11 @@ bool load(const char *dictionary)
                 {
                     table[hashPosition]->next = n;
                 }
-                n->next = table[hashPosition]->next;
-                table[hashPosition]->next = n;
+                else
+                {
+                    n->next = table[hashPosition]->next;
+                    table[hashPosition]->next = n;
+                }
             }
         }
         return true;
