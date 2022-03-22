@@ -90,7 +90,7 @@ bool load(const char *dictionary)
                 int hashPosition = hash(n->word);
                 if (table[hashPosition]->next == NULL)
                 {
-                    table[hashPosition] = n;
+                    table[hashPosition]->next = n;
                 }
                 else
                 {
