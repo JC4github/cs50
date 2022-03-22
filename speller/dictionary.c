@@ -116,9 +116,9 @@ bool unload(void)
     // TODO
     for (int i = 0; i < 26; i++)
     {
-        while (table[i] != NULL)
+        node *list = table[i];
+        while (list != NULL)
         {
-            node *list = table[i];
             node *tmp = list->next;
             free(list);
             list = tmp;
