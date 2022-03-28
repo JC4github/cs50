@@ -22,7 +22,7 @@ def main():
             dna.append(row)
         reader = csv.reader(file)
         for row in reader:
-            keys.append(row)
+            keys = row
             break
 
     print(keys)
