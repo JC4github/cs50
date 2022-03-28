@@ -21,9 +21,9 @@ while amount > 0:
         amount -= dim
     while (amount - nickel) < 0:
         coins += 1
-        amount -= quarter
+        amount -= nickel
     while (amount - pennie) < 0:
         coins += 1
-        amount -= quarter
+        amount -= pennie
 
 print(coins)
