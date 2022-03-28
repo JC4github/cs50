@@ -13,16 +13,16 @@ pennie = 0.01
 coins = 0
 
 while amount > 0:
-    while (amount - quarter) < 0:
+    while (amount - quarter) >= 0:
         coins += 1
         amount -= quarter
-    while (amount - dim) < 0:
+    while (amount - dim) >= 0:
         coins += 1
         amount -= dim
-    while (amount - nickel) < 0:
+    while (amount - nickel) >= 0:
         coins += 1
         amount -= nickel
-    while (amount - pennie) < 0:
+    while (amount - pennie) >= 0:
         coins += 1
         amount -= pennie
 
