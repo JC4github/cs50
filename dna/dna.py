@@ -10,6 +10,7 @@ def main():
             break
         else:
             print("Usage: CSV file, Text file")
+            break
 
 
     # TODO: Read database file into a variable
