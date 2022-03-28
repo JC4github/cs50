@@ -43,6 +43,7 @@ def main():
 
 
     # TODO: Check database for matching profiles
+    found = 0
     for person in dna:
         count = 0
         for key in person:
@@ -50,7 +51,10 @@ def main():
                 count += 1
                 if count == len(keys) - 1:
                     print(person['name'])
-    print("No match")
+                    found = 1
+
+    if found == 0:
+        print("No match")
 
     return
 
