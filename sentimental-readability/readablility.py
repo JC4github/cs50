@@ -16,7 +16,7 @@ for letter in sentence:
 
 L = round((letters / words) * 100, 3)
 S = round((sentences / words) * 100, 3)
-index = round((0.0588 * L) - (0.296 * S) - 15.8)
+index = round((0.0588 * L) - (0.296 * S) - 15.8, 3)
 
 if index < 1:
     print("Before Grade 1")
