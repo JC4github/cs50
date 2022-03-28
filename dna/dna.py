@@ -22,8 +22,7 @@ def main():
 
     keys = []
     for i in dna[0]:
-        keys.append[i]
-    print(keys)
+        print(i)
 
 
     # TODO: Read DNA sequence file into a variable
