@@ -39,14 +39,17 @@ def main():
 
     print(profile)
     for key in range(1, len(keys)):
-        match = longest_match(sequence, keys[key]):
-            profile[keys[key]] = match
+        match = longest_match(sequence, keys[key])
+        profile[keys[key]] = match
 
     print(profile)
 
 
 
     # TODO: Check database for matching profiles
+    for person in dna:
+        for key in person:
+            
 
     return
 
