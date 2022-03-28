@@ -19,10 +19,8 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             dna.append(row)
-    print(dna)
-    keys = []
-    keys.append(dna[0].keys())
-    print(keys)
+    for i in dna:
+        print(i)
 
 
     # TODO: Read DNA sequence file into a variable
