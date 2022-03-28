@@ -12,7 +12,7 @@ pennie = 0.01
 
 coins = 0
 
-while amount > 0.0001:
+while amount > 0.00000001:
     while (amount - quarter) >= 0:
         coins += 1
         amount -= quarter
