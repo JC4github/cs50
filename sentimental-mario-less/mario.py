@@ -10,3 +10,4 @@ for i in range(height):
     for block in range(blocks):
         print("#", end="")
         blocks += 1
+    print()
