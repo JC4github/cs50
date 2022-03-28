@@ -37,13 +37,9 @@ def main():
     for key in keys:
         profile[key] = 0
 
-    print(profile)
     for key in range(1, len(keys)):
         match = longest_match(sequence, keys[key])
         profile[keys[key]] = match
-
-    print(profile)
-
 
 
     # TODO: Check database for matching profiles
@@ -54,6 +50,7 @@ def main():
                 count += 1
                 if count == len(keys) - 1:
                     print(person['name'])
+    print("No match")
 
     return
 
