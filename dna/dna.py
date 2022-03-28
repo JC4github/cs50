@@ -19,7 +19,7 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             dna.append(row)
-    for i in dna:
+    for i in dna[0]:
         print(i)
 
 
