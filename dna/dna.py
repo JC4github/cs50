@@ -21,7 +21,9 @@ def main():
         for row in reader:
             dna.append(row)
         reader = csv.reader(file)
-        keys = reader[0]
+        for row in reader:
+            keys.append(row)
+            break
 
     print(keys)
 
