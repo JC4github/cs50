@@ -6,7 +6,7 @@ S = 0
 words = 1
 letters = 0
 sentence = 0
-for letter in sentence:
+for a in sentence:
     if (ord(letter) >= ord("A") and ord(letter) <= ord("Z")) or (ord(letter) >= ord("a") and ord(letter) <= ord("z")):
         letters += 1
     elif (ord(letter) == ord(" ")):
