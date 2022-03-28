@@ -39,6 +39,10 @@ def main():
 
     print(profile)
     for key in range(1, len(keys)):
+        match = longest_match(sequence, keys[key]):
+            profile[keys[key]] = match
+
+    print(profile)
 
 
 
