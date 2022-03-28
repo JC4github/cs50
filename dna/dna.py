@@ -49,7 +49,7 @@ def main():
     # TODO: Check database for matching profiles
     for person in dna:
         for key in person:
-            
+            print(key)
 
     return
 
