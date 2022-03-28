@@ -1,4 +1,5 @@
 from cs50 import get_int
 
 input = get_int("Height: ")
-for 
+for i in range(input):
+    
