@@ -20,13 +20,15 @@ def main():
         for row in reader:
             dna.append(row)
     print(dna)
+    print(dna[0][1])
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as text:
         sequence = text.read()
-    print(sequence)
+
 
     # TODO: Find longest match of each STR in DNA sequence
+
 
     # TODO: Check database for matching profiles
 
