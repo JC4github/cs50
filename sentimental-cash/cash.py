@@ -15,7 +15,7 @@ coins = 0
 while amount > 0.00000001:
     while (amount - quarter) >= 0:
         coins += 1
-        amount -= quarter
+        amount -= quarter.round()
     while (amount - dim) >= 0:
         coins += 1
         amount -= dim
