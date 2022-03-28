@@ -50,7 +50,7 @@ def main():
     for person in dna:
         count = 0
         for key in person:
-            if int(person[key]) == profile[key]:
+            if int(person[key]) == str(profile[key]):
                 count += 1
                 if count == len(keys) - 1:
                     print(person['name'])
