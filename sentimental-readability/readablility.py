@@ -11,6 +11,9 @@ for letter in sentence::
         letters += 1
     elif (ord(letter) == ord(" ")):
         words += 1
-    elif (ord9)
+    elif (ord(letter) == ord("!") or (ord(letter) == ord(".")) or (ord(letter) == ord("?"):
+        sentence += 1
+
+        
 
 index = 0.0588 * L - 0.296 * S - 15.8
