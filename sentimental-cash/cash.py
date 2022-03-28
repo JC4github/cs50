@@ -15,15 +15,15 @@ coins = 0
 while amount > 0.00000001:
     while (amount - quarter) >= 0:
         coins += 1
-        amount -= quarter.round()
+        amount = round(amount - quarter, 2)
     while (amount - dim) >= 0:
         coins += 1
-        amount -= dim
+        amount = round(amount - dim, 2)
     while (amount - nickel) >= 0:
         coins += 1
-        amount -= nickel
+        amount = round(amount - nickel, 2)
     while (amount - pennie) >= 0:
         coins += 1
-        amount -= pennie
+        amount = round(amount - pennie, 2)
 
 print(coins)
