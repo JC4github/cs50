@@ -6,8 +6,10 @@ blocks = 1
 for i in range(height):
     for space in range(spaces):
         print(" ", end="")
-        spaces -= 1
+
     for block in range(blocks):
         print("#", end="")
-        blocks += 1
+
     print()
+    spaces -= 1
+    blocks += 1
