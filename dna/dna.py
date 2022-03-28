@@ -20,7 +20,7 @@ def main():
         for row in reader:
             dna.append(row)
     print(dna)
-    print(dna[0][1])
+    print(dna[0].)
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as text:
