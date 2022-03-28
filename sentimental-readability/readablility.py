@@ -18,3 +18,12 @@ L = round((letters / words) * 100, 3)
 S = round((sentence / words) * 100, 3)
 index = round((0.0588 * L) - (0.296 * S) - 15.8, 3)
 
+if index < 1:
+    print("Before Grade 1")
+
+elif index > 16:
+   print("Grade 16+")
+
+else:
+    print(f"Grade {index})
+
