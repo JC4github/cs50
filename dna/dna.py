@@ -8,6 +8,8 @@ def main():
     while True:
         if len(sys.argv) == 3:
             break
+        else:
+            print("Usage: CSV file, Text file")
 
 
     # TODO: Read database file into a variable
