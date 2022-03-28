@@ -12,7 +12,6 @@ def main():
             print("Usage: CSV file, Text file")
             break
 
-
     # TODO: Read database file into a variable
     dna = []
     keys = []
@@ -31,7 +30,6 @@ def main():
     with open(sys.argv[2], "r") as text:
         sequence = text.read()
 
-
     # TODO: Find longest match of each STR in DNA sequence
     profile = {}
     for key in keys:
@@ -40,7 +38,6 @@ def main():
     for key in range(1, len(keys)):
         match = longest_match(sequence, keys[key])
         profile[keys[key]] = match
-
 
     # TODO: Check database for matching profiles
     found = 0
