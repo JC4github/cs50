@@ -15,14 +15,14 @@ def main():
 
     # TODO: Read database file into a variable
     dna = []
+    keys = []
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
             dna.append(row)
+        keys = file.read()
 
-    keys = []
-    for i in dna[0]:
-        print(i)
+    print(keys)
 
 
     # TODO: Read DNA sequence file into a variable
