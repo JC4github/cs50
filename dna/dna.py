@@ -20,7 +20,8 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             dna.append(row)
-        keys = file.readline()
+        reader = csv.reader(file)
+        keys = reader[0]
 
     print(keys)
 
