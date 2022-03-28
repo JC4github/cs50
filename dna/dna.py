@@ -48,8 +48,12 @@ def main():
 
     # TODO: Check database for matching profiles
     for person in dna:
+        count = 0
         for key in person:
-            print(key)
+            if person[key] == profile[key]:
+                count += 1
+                if count == len(keys) - 1:
+                    print(person['name'])
 
     return
 
