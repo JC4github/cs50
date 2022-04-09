@@ -33,5 +33,9 @@ SELECT caller FROM phone_calls WHERE year = 2021 AND day = 28 AND month = 7;
 --found callers made on the day
 
 (367) 555-5533 --sus number
-Bruce
-
+SELECT name,id, passport_number, license_plate FROM people WHERE phone_number = "(367) 555-5533";
++-------+--------+-----------------+---------------+
+| name  |   id   | passport_number | license_plate |
++-------+--------+-----------------+---------------+
+| Bruce | 686048 | 5773159633      | 94KL13X       |
++-------+--------+-----------------+---------------+
