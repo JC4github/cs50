@@ -12,3 +12,6 @@ SELECT transcript FROM interviews WHERE year = 2021 AND day = 28 AND month = 7;
 
  SELECT activity,license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 5 AND 25 AND activity = "exit";
  --found all license plate of cars leaving at the time
+
+ SELECT account_number, amount FROM atm_transactions WHERE day = 28 AND month = 7 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
+ --look at withdaw on the day, found account numbers
