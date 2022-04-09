@@ -33,4 +33,5 @@ SELECT caller FROM phone_calls WHERE year = 2021 AND day = 28 AND month = 7;
 --found callers made on the day
 
 (367) 555-5533 --sus number
+Bruce
 
