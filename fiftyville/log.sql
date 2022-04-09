@@ -6,3 +6,5 @@ SELECT description FROM crime_scene_reports WHERE year = 2021 AND day = 28;
 SELECT activity,license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute = 14;
 --found license plate entering right before theift
 
+SELECT transcript FROM interviews WHERE year = 2021 AND day = 28 AND month = 7;
+--10:05 - 10:25 theft left in a car
