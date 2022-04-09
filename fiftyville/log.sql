@@ -50,3 +50,6 @@ SELECT origin_airport_id, destination_airport_id FROM flights WHERE hour = 8 AND
 +-------------------+------------------------+
 | 8                 | 4                      |
 +-------------------+------------------------+
+
+SELECT city FROM airports WHERE id = 4;
+--new york
