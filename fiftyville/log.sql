@@ -43,3 +43,10 @@ SELECT name,id, passport_number, license_plate FROM people WHERE phone_number = 
 
 --taking flight on 29th
 earliest at 8:20
+
+SELECT origin_airport_id, destination_airport_id FROM flights WHERE hour = 8 AND day = 29 AND year = 2021 AND month = 7;
++-------------------+------------------------+
+| origin_airport_id | destination_airport_id |
++-------------------+------------------------+
+| 8                 | 4                      |
++-------------------+------------------------+
