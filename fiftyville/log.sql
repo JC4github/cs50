@@ -7,4 +7,5 @@ SELECT activity,license_plate FROM bakery_security_logs WHERE year = 2021 AND mo
 --found license plate entering right before theift
 
 SELECT transcript FROM interviews WHERE year = 2021 AND day = 28 AND month = 7;
---10:05 - 10:25 theft left in a car
+--10:05 - 10:25 thief left in a car
+--thief withdow money at ATM on Leggett street
