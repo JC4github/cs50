@@ -18,3 +18,5 @@ SELECT transcript FROM interviews WHERE year = 2021 AND day = 28 AND month = 7;
 
  SELECT person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE day = 28 AND month = 7 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw");
  --found people id
+
+ 
