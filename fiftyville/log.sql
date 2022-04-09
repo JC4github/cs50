@@ -42,3 +42,4 @@ SELECT name,id, passport_number, license_plate FROM people WHERE phone_number = 
 --left cafe at 10:18
 
 --taking flight on 29th
+earliest at 8:20
