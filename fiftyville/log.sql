@@ -15,3 +15,5 @@ SELECT transcript FROM interviews WHERE year = 2021 AND day = 28 AND month = 7;
 
  SELECT account_number, amount FROM atm_transactions WHERE day = 28 AND month = 7 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
  --look at withdaw on the day, found account numbers
+
+ SELECT person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE day = 28 AND month = 7 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw");
