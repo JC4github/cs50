@@ -39,3 +39,4 @@ SELECT name,id, passport_number, license_plate FROM people WHERE phone_number = 
 +-------+--------+-----------------+---------------+
 | Bruce | 686048 | 5773159633      | 94KL13X       |
 +-------+--------+-----------------+---------------+
+--left cafe at 10:18
