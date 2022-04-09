@@ -9,3 +9,6 @@ SELECT activity,license_plate FROM bakery_security_logs WHERE year = 2021 AND mo
 SELECT transcript FROM interviews WHERE year = 2021 AND day = 28 AND month = 7;
 --10:05 - 10:25 thief left in a car
 --thief withdow money at ATM on Leggett street
+
+ SELECT activity,license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 5 AND 25 AND activity = "exit";
+ --found all license plate of cars leaving at the time
