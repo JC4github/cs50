@@ -23,13 +23,17 @@
             <!-- TODO: Add multiple choice question here -->
             <h3>What is the switch in a mechanical keyboard known to have a bump called?</h3>
             <button class="linear" onclick="checking('linear')">linear</button>
-            <button>clicky</button>
-            <button>tactile</button>
+            <button class="clicky" onclick="checking('clicky')">clicky</button>
+            <button class="tactile" onclick="checking('tactile')">tactile</button>
             <script>
-                function checking(answer){
-                    if (answer == 'tactile'){
+                function checking(answer) {
+                    if (answer == 'tactile') {
                         let x = document.querySelector("." + answer);
-                        x
+                        x.style.color = "green";
+                    }
+                    else {
+                        let x = document.querySelector("." + answer);
+                        x.style.color = "red";
                     }
                 }
             </script>
