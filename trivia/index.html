@@ -23,7 +23,7 @@
             <!-- TODO: Add multiple choice question here -->
             <h3>What is the switch in a mechanical keyboard known to have a bump called?</h3>
             <p class="wrong" style="opacity: 0">incorrect</p>
-            <p class="correct" style="opacity: 0">correct</p>
+            <p class="correct" style="opacity: 0; position">correct</p>
             <button class="linear" onclick="checking('linear')">linear</button>
             <button class="clicky" onclick="checking('clicky')">clicky</button>
             <button class="tactile" onclick="checking('tactile')">tactile</button>
@@ -33,10 +33,13 @@
                         let x = document.querySelector("." + answer);
                         x.style.backgroundColor = "green";
                         document.querySelector(".correct").style.opacity = 100;
+                        document.querySelector(".wrong").style.opacity = 0;
                     }
                     else {
                         let x = document.querySelector("." + answer);
                         x.style.backgroundColor = "red";
+                        document.querySelector(".correct").style.opacity = 0;
+                        document.querySelector(".wrong").style.opacity = 100;
                     }
                 }
             </script>
