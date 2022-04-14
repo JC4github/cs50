@@ -17,15 +17,15 @@
 
             let incorrect = document.querySelectorAll('.incorrect');
             for(let i = 0; 1 < incorrect.length; i++){
-                incorrect[i].addEventListener('click', function(){
+                incorrect[i].addEventListener('click', function() {
                 incorrect[i].style.backgroundColor = 'red';
                 document.querySelector('#feedback1').innerHTML = 'incorrect';
-            }
             });
+            }
 
             document.querySelector('#check').addEventListener('click', function(){
                 let input = document.querySelector('input');
-                if (input.value === 75){
+                if (input.value == '75'){
                     input.style.backgroundColor = 'green';
                     document.querySelector('#feedback2').innerHTML = 'Correct!';
                 }
