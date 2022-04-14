@@ -52,10 +52,10 @@
             document.querySelector('#feedback1').innerHTML = 'Correct!';
         });
 
-        let incorrect = document.querySelectorALL('.incorrect');
+        let incorrect = document.querySelectorAll('.incorrect');
         for(let i = 0; 1 < incorrect.length; i++){
             incorrect[i].addEventListener('click', function(){
-            correct.style.backgroundColor = 'red';
+            incorrect[i].style.backgroundColor = 'red';
             document.querySelector('#feedback1').innerHTML = 'incorrect';
         }
         });
