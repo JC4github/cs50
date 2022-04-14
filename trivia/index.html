@@ -39,37 +39,39 @@
             <button id="check">Check Answer</button>
             <p id="feedback2"></p>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
 
-                let correct = document.querySelector('.correct');
-                correct.addEventListener('click', function{
-                    correct.style.backgroundColor = 'green';
-                    document.querySelector('#feedback1').innerHTML = 'Correct!';
-                });
-
-                let incorrect = document.querySelectorALL('.incorrect');
-                for(let i = 0; 1 < incorrect.length; i++){
-                    incorrect[i].addEventListener('click', function{
-                    correct.style.backgroundColor = 'red';
-                    document.querySelector('#feedback1').innerHTML = 'incorrect';
-                }
-                });
-
-                document.querySelector('#check').addEventListener('click', function(){
-                    let input = document.querySelector('input');
-                    if (input.value === 75){
-                        input.style.backgroundColor = 'green';
-                        document.querySelector('#feedback2').innerHTML = 'Correct!';
-                    }
-                    else{
-                        input.style.backgroundColor = 'red';
-                        document.querySelector('#feedback2').innerHTML = 'incorrect';
-                    }
-                });
-            });
-        </script>
     </div>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        let correct = document.querySelector('.correct');
+        correct.addEventListener('click', function{
+            correct.style.backgroundColor = 'green';
+            document.querySelector('#feedback1').innerHTML = 'Correct!';
+        });
+
+        let incorrect = document.querySelectorALL('.incorrect');
+        for(let i = 0; 1 < incorrect.length; i++){
+            incorrect[i].addEventListener('click', function{
+            correct.style.backgroundColor = 'red';
+            document.querySelector('#feedback1').innerHTML = 'incorrect';
+        }
+        });
+
+        document.querySelector('#check').addEventListener('click', function(){
+            let input = document.querySelector('input');
+            if (input.value === 75){
+                input.style.backgroundColor = 'green';
+                document.querySelector('#feedback2').innerHTML = 'Correct!';
+            }
+            else{
+                input.style.backgroundColor = 'red';
+                document.querySelector('#feedback2').innerHTML = 'incorrect';
+            }
+        });
+    });
+</script>
 
 </html>
