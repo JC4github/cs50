@@ -27,11 +27,11 @@
             answer.addEventListener('click', function(){
                 let input = document.querySelector('#input').value;
                 if (input == 'yes'){
-                    input.style.backgroundColor = 'green';
+                    answer.style.backgroundColor = 'green';
                     document.querySelector('#feedback2').innerHTML = 'Correct!';
                 }
                 else{
-                    input.style.backgroundColor = 'red';
+                    answer.style.backgroundColor = 'red';
                     document.querySelector('#feedback2').innerHTML = 'incorrect';
                 }
             });
