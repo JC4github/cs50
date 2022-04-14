@@ -25,7 +25,7 @@
 
             document.querySelector('#check').addEventListener('click', function(){
                 let input = document.querySelector('input');
-                if (input.value == '75'){
+                if (input.value === '75'){
                     input.style.backgroundColor = 'green';
                     document.querySelector('#feedback2').innerHTML = 'Correct!';
                 }
