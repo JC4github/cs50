@@ -7,33 +7,34 @@
     <link href="styles.css" rel="stylesheet">
     <title>Trivia!</title>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
 
             let correct = document.querySelector('.correct');
-            correct.addEventListener('click', function(){
+            correct.addEventListener('click', function () {
                 correct.style.backgroundColor = 'green';
                 document.querySelector('#feedback1').innerHTML = 'Correct!';
             });
 
             let incorrect = document.querySelectorAll('.incorrect');
-            for(let i = 0; 1 < incorrect.length; i++){
-                incorrect[i].addEventListener('click', function() {
-                incorrect[i].style.backgroundColor = 'red';
-                document.querySelector('#feedback1').innerHTML = 'incorrect';
-            });
+            for (let i = 0; 1 < incorrect.length; i++) {
+                incorrect[i].addEventListener('click', function () {
+                    incorrect[i].style.backgroundColor = 'red';
+                    document.querySelector('#feedback1').innerHTML = 'incorrect';
+                });
             }
 
             let answer = document.querySelector('#check');
-            answer.addEventListener('click', function(){
+            answer.addEventListener('click', function () {
                 let input = document.querySelector('#input').value;
-                if (input == 'yes'){
-                    answer.style.backgroundColor = 'green';
-                    document.querySelector('#feedback2').innerHTML = 'Correct!';
-                }
-                else{
-                    answer.style.backgroundColor = 'red';
-                    document.querySelector('#feedback2').innerHTML = 'incorrect';
-                }
+                alert(input);
+                // if (input == 'yes'){
+                //     answer.style.backgroundColor = 'green';
+                //     document.querySelector('#feedback2').innerHTML = 'Correct!';
+                // }
+                // else{
+                //     answer.style.backgroundColor = 'red';
+                //     document.querySelector('#feedback2').innerHTML = 'incorrect';
+                // }
             });
         });
     </script>
