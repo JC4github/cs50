@@ -47,14 +47,14 @@
     document.addEventListener('DOMContentLoaded', function() {
 
         let correct = document.querySelector('.correct');
-        correct.addEventListener('click', function{
+        correct.addEventListener('click', function(){
             correct.style.backgroundColor = 'green';
             document.querySelector('#feedback1').innerHTML = 'Correct!';
         });
 
         let incorrect = document.querySelectorALL('.incorrect');
         for(let i = 0; 1 < incorrect.length; i++){
-            incorrect[i].addEventListener('click', function{
+            incorrect[i].addEventListener('click', function(){
             correct.style.backgroundColor = 'red';
             document.querySelector('#feedback1').innerHTML = 'incorrect';
         }
