@@ -26,15 +26,14 @@
             let answer = document.querySelector('#check');
             answer.addEventListener('click', function () {
                 let input = document.querySelector('#input').value;
-                alert(input);
-                // if (input == 'yes'){
-                //     answer.style.backgroundColor = 'green';
-                //     document.querySelector('#feedback2').innerHTML = 'Correct!';
-                // }
-                // else{
-                //     answer.style.backgroundColor = 'red';
-                //     document.querySelector('#feedback2').innerHTML = 'incorrect';
-                // }
+                if (input == 'yes'){
+                    answer.style.backgroundColor = 'green';
+                    document.querySelector('#feedback2').innerHTML = 'Correct!';
+                }
+                else{
+                    answer.style.backgroundColor = 'red';
+                    document.querySelector('#feedback2').innerHTML = 'incorrect';
+                }
             });
         });
     </script>
