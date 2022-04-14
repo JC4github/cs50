@@ -25,7 +25,7 @@
 
             let answer = document.querySelector('#check');
             answer.addEventListener('click', function(){
-                let input = document.querySelector('input').value;
+                let input = document.querySelector('#input').value;
                 if (input == 'yes'){
                     input.style.backgroundColor = 'green';
                     document.querySelector('#feedback2').innerHTML = 'Correct!';
@@ -63,7 +63,7 @@
             <hr>
             <!-- TODO: Add free response question here -->
             <h3>A keyboard without the num pad has a size of? (answer in %)</h3>
-            <input type="text"></input>
+            <input id="input" type="text"></input>
             <button id="check">Check Answer</button>
             <p id="feedback2"></p>
         </div>
