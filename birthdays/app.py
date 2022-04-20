@@ -33,6 +33,7 @@ def index():
         day = request.form.get("day")
         date = request.form.get("date")
         print(date)
+        months = 
 
         # db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
 
