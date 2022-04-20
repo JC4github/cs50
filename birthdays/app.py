@@ -35,6 +35,7 @@ def index():
         print(date)
         months = date[5:7]
         print(months)
+        days = date[]
 
         # db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
 
