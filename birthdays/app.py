@@ -29,15 +29,11 @@ def index():
         # TODO: Add the user's entry into the database
         #validation
         name = request.form.get("name")
-        month = request.form.get("month")
-        day = request.form.get("day")
         date = request.form.get("date")
-        print(date)
-        months = date[5:7]
-        print(months)
-        days = date[]
+        month = date[5:7]
+        day = date[8:10]
 
-        # db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
+        db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
 
         return redirect("/")
 
