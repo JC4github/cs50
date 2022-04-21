@@ -116,8 +116,10 @@ def quote():
         if not tickerSymbol:
             return apology("Must include a symbol")
         else:
-            lookup(tickerSymbol)
-            
+            result = lookup(tickerSymbol)
+            return render_template("quoted.html", result)
+    else:
+        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
