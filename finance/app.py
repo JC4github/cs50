@@ -61,6 +61,7 @@ def buy():
             return apology("Symbol is invalid")
         else:
             result = lookup(tickerSymbol)
+            print(result["price"])
             cost = shares * result["price"]
             balance = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
             if (cost > balance):
