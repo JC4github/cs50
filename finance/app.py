@@ -130,7 +130,7 @@ def register():
         elif password != confirmation:
             return apology("Passwords does not match")
         else:
-            db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", name, generate_password_hash(password))
+            db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", name, generate_password_hash(password, method='pbkdf2:sha256', salt_length=8))
 
 
 
