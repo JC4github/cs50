@@ -62,7 +62,7 @@ def buy():
         else:
             result = lookup(tickerSymbol)
             cost = shares * result["price"]
-            balance = db.execure("SELECT ")
+            balance = db.execure("SELECT cash FROM users")
             if (cost > )
 
     else:
