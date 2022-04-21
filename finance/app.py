@@ -56,6 +56,8 @@ def buy():
             return apology("Must include a symbol")
         elif lookup(tickerSymbol) == None:
             return apology("Symbol is invalid")
+        else:
+            
     else:
         return render_template("buy.html")
 
