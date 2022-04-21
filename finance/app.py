@@ -123,8 +123,9 @@ def register():
     users = db.execute("SELECT username FROM users WHERE username = ?", name)
 
     if not name:
-        return apology("TODO")
-    else if name == users[0]["username"]
+        return apology("Must include a username")
+    else if name == users[0]["username"]:
+        return apology("User name already exists")
 
 
 @app.route("/sell", methods=["GET", "POST"])
