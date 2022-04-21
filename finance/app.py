@@ -67,8 +67,9 @@ def buy():
             if (cost > balance[0]["cash"]):
                 return apology("insufficient balance")
             else:
+                newBalance = balance[0]["cash"] - cost
                 db.execute("INSERT INTO buys (user_id, symbol, shares, price, date) VALUES(?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, shares, cost, date.today())
-                db.execute
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", newBalance, session["user_id"])
                 return render_template("buy.html")
 
     else:
