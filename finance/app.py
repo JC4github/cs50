@@ -116,6 +116,7 @@ def quote():
         if not tickerSymbol:
             return apology("Must include a symbol")
         else:
+            lookup(tickerSymbol)
             
 
 
