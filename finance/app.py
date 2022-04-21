@@ -125,7 +125,7 @@ def register():
 
         if not name or not password:
             return apology("Must include a username and/or password")
-        elif (name == users[0]["username"]):
+        elif len(users) != 0:
             return apology("User name already exists")
         elif password != confirmation:
             return apology("Passwords does not match")
