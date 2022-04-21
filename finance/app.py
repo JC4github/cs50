@@ -120,10 +120,11 @@ def register():
     name = request.form.get("username")
     password = request.form.get("password")
     confirmation = request.form.get("confirmation")
-    users = db.execute("SELECT )
+    users = db.execute("SELECT username FROM users WHERE username = ?", name)
 
-    if not name or :
+    if not name:
         return apology("TODO")
+    else if name == users[0]["username"]
 
 
 @app.route("/sell", methods=["GET", "POST"])
