@@ -52,12 +52,15 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         tickerSymbol = request.form.get("symbol")
+        shares = request.form.get("shares")
         if not tickerSymbol:
             return apology("Must include a symbol")
+        elif shares == 0:
+            return apology("Cannot buy 0 shares")
         elif lookup(tickerSymbol) == None:
             return apology("Symbol is invalid")
         else:
-            
+
     else:
         return render_template("buy.html")
 
