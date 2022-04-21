@@ -61,10 +61,9 @@ def buy():
             return apology("Symbol is invalid")
         else:
             result = lookup(tickerSymbol)
-            print(result)
             cost = shares * result["price"]
             balance = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
-            if (cost > balance):
+            if (cost > balance[0]["cash"]):
                 return apology("insufficient balance")
             else:
                 db.execute("INSERT INTO buys (user_id, symbol, shares, price, date) VALUES(?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, shares, cost, datetime('now', 'localtime'))
