@@ -8,8 +8,17 @@
     <table>
         <thead>
             <tr>
-                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
             </tr>
         </thead>
+        <tbody>
+            <tr>
+                <td>{{ result["name"] }}</td>
+                <td>{{ result["price"] }}</td>
+                <td>{{ result["symbol"] }}</td>
+            </tr>
+        </tbody>
     </table>
 {% endblock %}

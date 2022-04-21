@@ -117,7 +117,7 @@ def quote():
             return apology("Must include a symbol")
         else:
             result = lookup(tickerSymbol)
-            return render_template("quoted.html", result)
+            return render_template("quoted.html", result=result)
     else:
         return render_template("quote.html")
 
