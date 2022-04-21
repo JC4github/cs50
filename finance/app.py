@@ -62,8 +62,11 @@ def buy():
         else:
             result = lookup(tickerSymbol)
             cost = shares * result["price"]
-            balance = db.execure("SELECT cash FROM users")
-            if (cost > )
+            balance = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
+            if (cost > balance):
+                return apology("insufficient balance")
+            else:
+                db.execute("INSERT INTO buys (user_id, symbol, shares, price, date) VALUES(?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, shares, cost, )
 
     else:
         return render_template("buy.html")
