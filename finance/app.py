@@ -52,7 +52,7 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         tickerSymbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        shares = float(request.form.get("shares"))
         if not tickerSymbol:
             return apology("Must include a symbol")
         elif shares <= 0:
