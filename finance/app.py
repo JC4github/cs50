@@ -120,7 +120,7 @@ def register():
     name = request.form.get("username")
     password = request.form.get("password")
     confirmation = request.form.get("confirmation")
-    
+    users = db.execute("SELECT )
 
     if not name or :
         return apology("TODO")
