@@ -60,6 +60,8 @@ def buy():
         elif lookup(tickerSymbol) == None:
             return apology("Symbol is invalid")
         else:
+            result = lookup(tickerSymbol)
+            
 
     else:
         return render_template("buy.html")
