@@ -61,7 +61,9 @@ def buy():
             return apology("Symbol is invalid")
         else:
             result = lookup(tickerSymbol)
-            
+            cost = shares * result["price"]
+            balance = db.execure("SELECT ")
+            if (cost > )
 
     else:
         return render_template("buy.html")
