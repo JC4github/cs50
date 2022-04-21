@@ -54,7 +54,7 @@ def buy():
         tickerSymbol = request.form.get("symbol")
         if not tickerSymbol:
             return apology("Must include a symbol")
-        else:
+        elif:
             result = lookup(tickerSymbol)
             return render_template("quoted.html", result=result)
     else:
