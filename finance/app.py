@@ -124,7 +124,7 @@ def register():
 
     if not name:
         return apology("Must include a username")
-    else if name == users[0]["username"]:
+    elif (name == users[0]["username"]):
         return apology("User name already exists")
 
 
