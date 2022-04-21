@@ -68,6 +68,7 @@ def buy():
                 return apology("insufficient balance")
             else:
                 db.execute("INSERT INTO buys (user_id, symbol, shares, price, date) VALUES(?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, shares, cost, date.today())
+                db.execute
                 return render_template("buy.html")
 
     else:
