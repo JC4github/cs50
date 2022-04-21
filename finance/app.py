@@ -55,8 +55,8 @@ def buy():
         shares = request.form.get("shares")
         if not tickerSymbol:
             return apology("Must include a symbol")
-        elif shares == 0:
-            return apology("Cannot buy 0 shares")
+        elif shares <= 0:
+            return apology("Invalid share amount")
         elif lookup(tickerSymbol) == None:
             return apology("Symbol is invalid")
         else:
