@@ -183,6 +183,28 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    if request.method == "POST":
+        tickerSymbol = request.form.get("symbol").upper()
+        shares = float(request.form.get("shares"))
+        if not tickerSymbol:
+            return apology("Must include a symbol")
+        elif shares <= 0:
+            return apology("Invalid share amount")
+        elif lookup(tickerSymbol) == None:
+            return apology("Symbol is invalid")
+        else:
+            result = lookup(tickerSymbol)
+            total = shares * result["price"]
+            balance = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
+            if (total > balance[0]["cash"]):
+                return apology("insufficient balance")
+            else:
+                newBalance = balance[0]["cash"] - total
+                action = "buy"
+                db.execute("INSERT INTO stocks (user_id, symbol, name, shares, price, total, action, date) VALUES(?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, result["name"], shares, result["price"], total, action, date.today())
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", newBalance, session["user_id"])
+                return redirect("/")
 
-    symbols = db.execute("SELECT DISTICT symbol FROM stocks WHERE id = ?", session["user_id"])
-    return render_template("sell.html", symbols=symbols)
+    else:
+        symbols = db.execute("SELECT DISTICT symbol FROM stocks WHERE id = ?", session["user_id"])
+        return render_template("sell.html", symbols=symbols)
