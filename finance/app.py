@@ -63,13 +63,13 @@ def buy():
             return apology("Symbol is invalid")
         else:
             result = lookup(tickerSymbol)
-            cost = shares * result["price"]
+            total = shares * result["price"]
             balance = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
-            if (cost > balance[0]["cash"]):
+            if (total > balance[0]["cash"]):
                 return apology("insufficient balance")
             else:
                 newBalance = balance[0]["cash"] - cost
-                db.execute("INSERT INTO stocks (user_id, symbol, name, shares, price, total, date) VALUES(?, ?, ?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, shares, cost, date.today())
+                db.execute("INSERT INTO stocks (user_id, symbol, name, shares, price, total, date) VALUES(?, ?, ?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, result["name"], shares, result["price"], total, date.today())
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", newBalance, session["user_id"])
                 return render_template("buy.html")
 
