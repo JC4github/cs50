@@ -16,7 +16,7 @@
         <tbody>
             <tr>
                 <td>{{ result["name"] }}</td>
-                <td>{{ result["price"] }}</td>
+                <td>{{ result["price"] | usd}}</td>
                 <td>{{ result["symbol"] }}</td>
             </tr>
         </tbody>
