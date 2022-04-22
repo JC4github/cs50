@@ -94,7 +94,7 @@ def buy():
 def history():
     """Show history of transactions"""
     pastactions = db.execute("SELECT * FROM stocks WHERE user_id = ?", session["user_id"])
-    return render_template("history.html", pastactions)
+    return render_template("history.html", pastactions=pastactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
