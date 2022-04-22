@@ -28,12 +28,12 @@
     </tbody>
     <tfoot>
         <tr>
-            <td>Cash</td>
+            <td class="text-end" colspan="4">Cash</td>
             <td>{{ cash[0]["cash"] | usd}}</td>
         </tr>
         <tr>
             <td>TOTAL</td>
-            <td>{{ sumbalance | usd}}</td>
+            <td colspan="4">{{ sumbalance | usd}}</td>
         </tr>
     </tfoot>
 </table>
