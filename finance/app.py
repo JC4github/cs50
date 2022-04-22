@@ -44,10 +44,11 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    stocks = db.execute("SELECT symbol, name, SUM(shares), price, total FROM stocks WHERE user_id = ? GROUP BY symbol ORDER BY date", session["user_id"])
+    stocks = db.execute("SELECT symbol, name, SUM(shares), price, total, a FROM stocks WHERE user_id = ? GROUP BY symbol ORDER BY date", session["user_id"])
     sumbalance = 0
     for stock in stocks:
         result = lookup(stock["symbol"])
+
         stock["price"] = result["price"]
         stock["total"] = result["price"] * stock["SUM(shares)"]
         sumbalance = sumbalance + stock["total"]
@@ -77,7 +78,8 @@ def buy():
                 return apology("insufficient balance")
             else:
                 newBalance = balance[0]["cash"] - total
-                db.execute("INSERT INTO stocks (user_id, symbol, name, shares, price, total, action, date) VALUES(?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, result["name"], shares, result["price"], total, ,"buy", date.today())
+                action = "buy"
+                db.execute("INSERT INTO stocks (user_id, symbol, name, shares, price, total, action, date) VALUES(?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, result["name"], shares, result["price"], total, action, date.today())
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", newBalance, session["user_id"])
                 return redirect("/")
 
