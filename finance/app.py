@@ -208,5 +208,5 @@ def sell():
                 return redirect("/")
 
     else:
-        symbols = db.execute("SELECT DISTICT symbol FROM stocks WHERE id = ?", session["user_id"])
+        symbols = db.execute("SELECT DISTINCT symbol FROM stocks WHERE id = ?", session["user_id"])
         return render_template("sell.html", symbols=symbols)
