@@ -45,10 +45,11 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     stocks = db.execute("SELECT symbol, name, SUM(shares), price, total FROM stocks WHERE user_id = ? GROUP BY symbol ORDER BY date", session["user_id"])
+    print(stocks)
     for stock in stocks:
         result = lookup(stock["symbol"])
         stock["price"] = result["price"]
-        stock["total"] = result["price"] * stock["shares"]
+        stock["total"] = result["price"] * stock["SUM(shares)"]
 
     return render_template("index.html", stocks=stocks)
 
