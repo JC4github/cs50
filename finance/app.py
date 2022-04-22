@@ -61,7 +61,7 @@ def index():
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
-        tickerSymbol = upper(request.form.get("symbol"))
+        tickerSymbol = request.form.get("symbol").upper()
         shares = float(request.form.get("shares"))
         if not tickerSymbol:
             return apology("Must include a symbol")
