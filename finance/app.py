@@ -185,7 +185,7 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
         tickerSymbol = request.form.get("symbol").upper()
-        shares = float(request.form.get("shares", 0))
+        shares = float(request.form.get("shares"))
         if not tickerSymbol:
             return apology("Must include a symbol")
         elif shares <= 0:
