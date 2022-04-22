@@ -18,11 +18,11 @@
     <tbody>
         {% for stock in stocks %}
             <tr>
-                <td>{{ result["symbol"] }}</td>
-                <td>{{ result["name"] }}</td>
-                <td>{{ result["shares"] }}</td>
-                <td>{{ result["price"] }}</td>
-                <td>{{ result["total"] }}</td>
+                <td>{{ stock["symbol"] }}</td>
+                <td>{{ stock["name"] }}</td>
+                <td>{{ stock["SUM(shares)"] }}</td>
+                <td>{{ stock["price"] | usd}}</td>
+                <td>{{ stock["total"] | usd}}</td>
             </tr>
         {% endfor %}
     </tbody>
