@@ -202,7 +202,7 @@ def sell():
             balance = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
             newBalance = balance[0]["cash"] + total
             action = "sell"
-            shares = shares / -1
+            shares = shares * -1
             db.execute("INSERT INTO stocks (user_id, symbol, name, shares, price, total, action, date) VALUES(?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, result["name"], shares, result["price"], total, action, date.today())
             db.execute("UPDATE users SET cash = ? WHERE id = ?", newBalance, session["user_id"])
             return redirect("/")
