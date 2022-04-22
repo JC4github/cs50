@@ -193,7 +193,7 @@ def sell():
         elif lookup(tickerSymbol) == None:
             return apology("Symbol is invalid")
         else:
-            ownshares = db.execute("SELECT share FROM stocks where id = ? AND symbol = ?", session["user_id"], tickerSymbol)
+            ownshares = db.execute("SELECT SUM(share) FROM stocks where id = ? AND symbol = ?", session["user_id"], tickerSymbol)
             result = lookup(tickerSymbol)
             total = shares * result["price"]
             balance = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
