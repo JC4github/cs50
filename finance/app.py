@@ -77,7 +77,7 @@ def buy():
                 return apology("insufficient balance")
             else:
                 newBalance = balance[0]["cash"] - total
-                db.execute("INSERT INTO stocks (user_id, symbol, name, shares, price, total, date) VALUES(?, ?, ?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, result["name"], shares, result["price"], total, date.today())
+                db.execute("INSERT INTO stocks (user_id, symbol, name, shares, price, total, action, date) VALUES(?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], tickerSymbol, result["name"], shares, result["price"], total, ,"buy", date.today())
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", newBalance, session["user_id"])
                 return redirect("/")
 
