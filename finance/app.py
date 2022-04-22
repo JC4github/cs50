@@ -183,4 +183,5 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    symbols = db.execute(SELECT )
     return apology("TODO")
