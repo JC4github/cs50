@@ -45,6 +45,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     stocks = db.execute("SELECT symbol, name, SUM(shares) FROM stocks WHERE user_id = ? GROUP BY symbol ORDER BY date", session["user_id"])
+    
     return render_template("index.html", stocks=stocks)
 
 
