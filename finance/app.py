@@ -183,5 +183,6 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    symbols = db.execute(SELECT )
-    return apology("TODO")
+
+    symbols = db.execute("SELECT DISTICT symbol FROM stocks WHERE id = ?", session["user_id"])
+    return render_template("sell.html", symbols=symbols)
