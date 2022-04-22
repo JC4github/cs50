@@ -8,18 +8,21 @@
 <table class="table table-striped table-sm">
     <thead>
         <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Shares</th>
-            <th scope="col">Price</th>
             <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
         </tr>
     </thead>
     <tbody>
         {% for stock in stocks %}
             <tr>
-                <td>{{ result["name"] }}</td>
-                <td>{{ result["price"] }}</td>
                 <td>{{ result["symbol"] }}</td>
+                <td>{{ result["name"] }}</td>
+                <td>{{ result["shares"] }}</td>
+                <td>{{ result["price"] }}</td>
+                <td>{{ result["total"] }}</td>
             </tr>
         {% endfor %}
     </tbody>
