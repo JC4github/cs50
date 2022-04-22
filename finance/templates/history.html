@@ -13,30 +13,24 @@
                 <th class="text-start" scope="col">Name</th>
                 <th class="text-end" scope="col">Shares</th>
                 <th class="text-end" scope="col">Price</th>
-                <th class="text-end" scope="col">TOTAL</th>
+                <th class="text-end" scope="col">Total</th>
+                <th class="text-end" scope="col">Action</th>
+                <th class="text-end" scope="col">Date</th>
             </tr>
         </thead>
         <tbody>
             {% for action in pastactions %}
                 <tr>
-                    <td class="text-start">{{ stock["symbol"] }}</td>
-                    <td class="text-start">{{ stock["name"] }}</td>
-                    <td class="text-end">{{ stock["SUM(shares)"] }}</td>
-                    <td class="text-end">{{ stock["price"] | usd}}</td>
-                    <td class="text-end">{{ stock["total"] | usd}}</td>
+                    <td class="text-start">{{ action["symbol"] }}</td>
+                    <td class="text-start">{{ action["name"] }}</td>
+                    <td class="text-end">{{ action["SUM(shares)"] }}</td>
+                    <td class="text-end">{{ action["price"] | usd}}</td>
+                    <td class="text-end">{{ action["total"] | usd}}</td>
+                    <td class="text-end">{{ action["action"] }}</td>
+                    <td class="text-end">{{ action["date"] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
-        <tfoot>
-            <tr>
-                <td class="text-end fw-bold" colspan="4" >Cash</td>
-                <td class="text-end">{{ cash[0]["cash"] | usd}}</td>
-            </tr>
-            <tr>
-                <td class="text-end fw-bold" colspan="4">TOTAL</td>
-                <td class="text-end">{{ sumbalance | usd}}</td>
-            </tr>
-        </tfoot>
     </table>
 </main>
 {% endblock %}
