@@ -44,7 +44,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    stocks = db.execute("SELECT symbol, name, shares, price, total, action FROM stocks WHERE user_id = ? GROUP BY symbol ORDER BY date", session["user_id"])
+    stocks = db.execute("SELECT symbol, name, SUM(shares), price, total, action FROM stocks WHERE user_id = ? GROUP BY symbol ORDER BY date", session["user_id"])
     sumbalance = 0
     for stock in stocks:
         result = lookup(stock["symbol"])
