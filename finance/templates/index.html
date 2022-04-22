@@ -12,7 +12,7 @@
             <th scope="col">Name</th>
             <th scope="col">shares</th>
             <th scope="col">Price</th>
-            <th scope="col">Total</th>
+            <th scope="col">TOTAL</th>
         </tr>
     </thead>
     <tbody>
@@ -26,5 +26,15 @@
             </tr>
         {% endfor %}
     </tbody>
+    <tfoot>
+        <tr>
+            <td>Cash</td>
+            <td>{{ cash[0]["cash"] | usd}}</td>
+        </tr>
+        <tr>
+            <td>TOTAL</td>
+            <td>{{ sumbalance | usd}}</td>
+        </tr>
+    </tfoot>
 </table>
 {% endblock %}
