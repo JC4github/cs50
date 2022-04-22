@@ -197,7 +197,6 @@ def sell():
             if ownshares[0]["SUM(share)"] < shares:
                 return apology("insufficient shares")
             else:
-
             result = lookup(tickerSymbol)
             total = shares * result["price"]
             balance = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
