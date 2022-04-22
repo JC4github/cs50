@@ -193,7 +193,7 @@ def sell():
         elif lookup(tickerSymbol) == None:
             return apology("Symbol is invalid")
         else:
-            ownshares = db.execute("SELECT SUM(share) FROM stocks where id = ? AND symbol = ?", session["user_id"], tickerSymbol)
+            ownshares = db.execute("SELECT SUM(share) FROM stocks where user_id = ? AND symbol = ?", session["user_id"], tickerSymbol)
             if ownshares[0]["SUM(share)"] < shares:
                 return apology("insufficient shares")
             else:
@@ -208,5 +208,5 @@ def sell():
                 return redirect("/")
 
     else:
-        symbols = db.execute("SELECT DISTINCT symbol FROM stocks WHERE id = ?", session["user_id"])
+        symbols = db.execute("SELECT DISTINCT symbol FROM stocks WHERE user_id = ?", session["user_id"])
         return render_template("sell.html", symbols=symbols)
